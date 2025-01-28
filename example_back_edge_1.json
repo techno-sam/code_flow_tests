@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {
+      "name": "root",
+      "color": "#a0ef1d"
+    },
+
+    {
+      "name": "A",
+      "color": "#ff0099"
+    },
+    {
+      "name": "B",
+      "color": "#00ff97"
+    }
+  ],
+  "edges": [
+    {
+      "from": "root",
+      "to": "A",
+      "type": "direct"
+    },
+    {
+      "from": "root",
+      "to": "B",
+      "type": "direct"
+    },
+
+    {
+      "from": "A",
+      "to": "root",
+      "type": "loop"
+    }
+  ]
+}

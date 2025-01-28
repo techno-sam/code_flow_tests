@@ -1,0 +1,317 @@
+<html lang="en">
+<head>
+    <title>Code Flow Tests</title>
+    <style id="dynamic-styles"></style>
+    <style>
+        dialog {
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        // Zoom code from https://github.com/AlexeyBoiko/DgrmJS
+        // https://github.com/AlexeyBoiko/DgrmJS/blob/e6d6a13c6294e79058f605ff1609c3f08ee5cf27/src/diagram/infrastructure/iterable-utils.js
+        /**
+         * @template T
+         * @param {Iterable<T>} iterable
+         * @param {{(el:T) :boolean}=} filter
+         * @returns {T | null}
+         */
+        function first(iterable, filter) {
+            for (const el of iterable) {
+                if (!filter || filter(el)) { return el; }
+            }
+            return null;
+        }
+        // https://github.com/AlexeyBoiko/DgrmJS/blob/e6d6a13c6294e79058f605ff1609c3f08ee5cf27/src/diagram/infrastructure/svg-utils.js
+        /**
+         * @param {SVGGraphicsElement} svgEl
+         * @param {number} transform
+         * @param {SVGSVGElement=} svg pass if svgEl not yet in DOM
+         * @returns {SVGTransform}
+         */
+        function ensureTransform(svgEl, transform, svg) {
+            let tr = first(svgEl.transform.baseVal, tt => tt.type === transform);
+            if (!tr) {
+                tr = (svgEl.ownerSVGElement || svg).createSVGTransform();
+                svgEl.transform.baseVal.appendItem(tr);
+            }
+            return tr;
+        }
+
+        /**
+        * @param {SVGGraphicsElement} svgEl
+        * @param { {x: number, y: number} } position
+        * @param {SVGSVGElement=} svg pass if svgEl not yet in DOM
+        * @returns {void}
+        */
+        function svgPositionSet(svgEl, position, svg) {
+            ensureTransform(svgEl, SVGTransform.SVG_TRANSFORM_TRANSLATE, svg).setTranslate(position.x, position.y);
+        }
+
+        /**
+         * @param {SVGGraphicsElement} svgEl
+         * @returns { {x: number, y: number} }
+         */
+        function svgPositionGet(svgEl) {
+            const tr = first(svgEl.transform.baseVal, tt => tt.type === SVGTransform.SVG_TRANSFORM_TRANSLATE);
+            return tr ? { x: tr.matrix.e, y: tr.matrix.f } : { x: 0, y: 0 };
+        }
+
+        /**
+         * @param {SVGGraphicsElement} svgEl
+         * @param {number} angle
+         * @param {SVGSVGElement=} svg pass if svgEl not yet in DOM
+         * @returns {void}
+         */
+        function svgRotate(svgEl, angle, svg) {
+            ensureTransform(svgEl, SVGTransform.SVG_TRANSFORM_ROTATE, svg).setRotate(angle, 0, 0);
+        }
+
+        /**
+         * @param {SVGGraphicsElement} svgEl
+         * @param {Point} fixedPoint this point will not chage position while scale
+         * @param {number} scale
+         * @param {number} nextScale
+         */
+        function svgScale(svgEl, fixedPoint, scale, nextScale) {
+            const position = svgPositionGet(svgEl);
+
+            svgPositionSet(svgEl, {
+                x: nextScale / scale * (position.x - fixedPoint.x) + fixedPoint.x,
+                y: nextScale / scale * (position.y - fixedPoint.y) + fixedPoint.y
+            });
+
+            ensureTransform(svgEl, SVGTransform.SVG_TRANSFORM_SCALE)
+                .setScale(nextScale, nextScale);
+        }
+
+        const dynamicStyles = document.getElementById('dynamic-styles');
+
+        const svgData = {
+            svg: null,
+            scale: 1.0,
+        }
+
+        const lockedStyles = {};
+
+        let hoveredNode = null;
+
+        function logHoveredElement(event) {
+            let inner = "";
+            console.log(event.target);
+            const classes = event.target.classList;
+            hoveredNode = null;
+            if (classes.contains('node')) {
+                // find the node id
+                for (let i = 0; i < classes.length; i++) {
+                    if (classes[i].startsWith('node_')) {
+                        let nodeId = classes[i].substring(5);
+                        console.log('Node ID:', nodeId);
+                        nodeId = nodeId.replaceAll("=", "\\=");
+                        hoveredNode = nodeId;
+                        inner = `
+                        .from_${nodeId}.real {
+                            stroke: cyan;
+                            stroke-width: 3;
+                        }
+                        .to_${nodeId}.real {
+                            stroke: cyan;
+                            stroke-width: 3;
+                        }
+                        polygon.from_${nodeId} {
+                            fill: cyan;
+                        }
+                        polygon.to_${nodeId} {
+                            fill: cyan;
+                        }
+                        rect.node_${nodeId} {
+                            stroke: cyan;
+                            stroke-width: 3;
+                        }
+                        `;
+                        console.log(inner);
+                    }
+                }
+            } else if (classes.contains('edge')) {
+                // find the from and to node ids
+                let fromId = null;
+                let toId = null;
+                for (let i = 0; i < classes.length; i++) {
+                    if (classes[i].startsWith('from_')) {
+                        fromId = classes[i].substring(5);
+                    } else if (classes[i].startsWith('to_')) {
+                        toId = classes[i].substring(3);
+                    }
+                }
+                if (fromId && toId) {
+                    console.log('Edge from', fromId, 'to', toId);
+                    fromId = fromId.replaceAll("=", "\\=");
+                    toId = toId.replaceAll("=", "\\=");
+                    inner = `
+                    .from_${fromId}.to_${toId}.real {
+                        stroke: cyan;
+                        stroke-width: 3;
+                    }
+                    polygon.from_${fromId}.to_${toId} {
+                        fill: cyan;
+                    }
+                    rect.node_${fromId} {
+                        stroke: cyan;
+                        stroke-width: 3;
+                    }
+                    rect.node_${toId} {
+                        stroke: cyan;
+                        stroke-width: 3;
+                    }
+                    `;
+                    console.log(inner);
+                }
+            }
+
+            dynamicStyles.innerHTML = inner;
+        }
+        document.addEventListener('mouseover', logHoveredElement);
+
+        /**
+         *
+         * @returns {Promise<string>}
+         */
+        function pickColor() {
+            // pop up color picker dialog and return the selected color
+            const dialog = document.getElementById('color-picker');
+            dialog.showModal();
+            return new Promise((resolve, reject) => {
+                dialog.addEventListener('close', () => {
+                    resolve(dialog.querySelector('#color-picker-input').value);
+                });
+            });
+        }
+
+        function globalOnClick(event) {
+            if (hoveredNode) {
+                console.log('Clicked on node', hoveredNode);
+                let lockedStyle = lockedStyles[hoveredNode];
+                if (lockedStyle) {
+                    if (event.shiftKey) {
+                        pickColor().then(color => {
+                            color = color || 'cyan';
+                            lockedStyle.element.innerHTML = lockedStyle.originalStyle.replaceAll('cyan', color);
+                        });
+                    } else {
+                        lockedStyle.element.remove();
+                        delete lockedStyles[hoveredNode];
+                    }
+                } else {
+                    const el = document.createElement('style');
+                    el.innerHTML = dynamicStyles.innerHTML;
+                    document.head.appendChild(el);
+                    lockedStyle = {
+                        element: el,
+                        originalStyle: dynamicStyles.innerHTML
+                    };
+                    lockedStyles[hoveredNode] = lockedStyle;
+                    if (event.shiftKey) {
+                        pickColor().then(color => {
+                            color = color || 'cyan';
+                            lockedStyle.element.innerHTML = lockedStyle.originalStyle.replaceAll('cyan', color);
+                        });
+                    }
+                }
+            }
+        }
+        document.addEventListener('click', globalOnClick);
+
+        function loadSVG() {
+            document.getElementById('dynamic-styles').innerHTML = '';
+            const target = document.getElementById('svg-target');
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'http://localhost/output.svg', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    target.innerHTML = xhr.responseText;
+                    const svg = target.querySelector('svg');
+                    // if svg is not full screen, make it full screen
+                    /*if (svg.clientWidth < window.innerWidth)
+                        svg.setAttribute('width', '100%');
+                    if (svg.clientHeight < window.innerHeight)
+                        svg.setAttribute('height', '100%');*/
+
+                    svg.innerHTML = '<g data-key="canvas">' + svg.innerHTML + '</g>';
+
+                    svg.setAttribute('width', '100%');
+                    svg.setAttribute('height', '100%');
+                    svg.style.position = 'fixed';
+                    svg.style.top = '0';
+                    svg.style.left = '0';
+                    svg.style.display = 'block';
+
+                    svgData.svg = svg;
+                }
+            };
+            xhr.send();
+        }
+        window.onload = loadSVG;
+
+        function mouseMove(event) {
+            // noinspection JSBitwiseOperatorUsage
+            if (event.buttons & 0b101) {
+                console.log(event);
+                // Pan the page
+                //window.scrollBy(-event.movementX, -event.movementY);
+                const canvas = svgData.svg.querySelector('[data-key="canvas"]');
+                const currentPos = svgPositionGet(canvas);
+                svgPositionSet(canvas, {
+                    x: currentPos.x + event.movementX,
+                    y: currentPos.y + event.movementY
+                });
+            }
+        }
+        document.addEventListener('mousemove', mouseMove);
+
+        function doScale(svgInfo, newScale, pos) {
+            if (newScale < 0.05)
+                newScale = 0.05;
+            svgScale(svgInfo.svg.querySelector('[data-key="canvas"]'), pos, svgInfo.scale, newScale);
+            svgInfo.scale = newScale;
+        }
+
+        // https://github.com/AlexeyBoiko/DgrmJS/blob/e6d6a13c6294e79058f605ff1609c3f08ee5cf27/src/diagram-extensions/scale-feature.js
+        function zoomScroll(event) {
+            event.preventDefault();
+            console.log(event);
+            const delta = event.deltaY || event.deltaX;
+            let scaleFactor = 0.001;
+            // if shift key is pressed, scale faster
+            if (event.shiftKey)
+                scaleFactor *= 5;
+            else if (event.ctrlKey)
+                scaleFactor *= 0.2;
+            const scaleStep = Math.abs(delta * scaleFactor);/*Math.abs(delta) < 50
+                ? 0.05 // trackpad pitch
+                : 0.25; // mouse wheel*/
+
+            doScale(
+                svgData,
+                svgData.scale + (delta < 0 ? scaleStep : -scaleStep),
+                {
+                    x: event.clientX,
+                    y: event.clientY
+                }
+            );
+        }
+        document.addEventListener('wheel', zoomScroll, {
+            passive: false
+        });
+    </script>
+</head>
+<body style="margin: 0">
+<input type="button" value="Reload" style="font-size: 150%; background-color: mediumspringgreen; position: fixed; z-index: 10;" onclick="loadSVG()">
+<div id="svg-target" style="white-space: pre-wrap; overflow: clip; display: block; top: 0; left: 0; position: fixed; width: 100%; height: 100%"></div>
+<!-- <img src="http://localhost/output.svg"  alt="Code flow"/> -->
+<dialog id="color-picker">
+    <label for="color-picker-input">Color: </label><input type="color" id="color-picker-input" value="#ff0000">
+    <br/>
+    <input type="button" value="OK" onclick="document.getElementById('color-picker').close()">
+</dialog>
+</body>
+</html>

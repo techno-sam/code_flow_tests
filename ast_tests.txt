@@ -1,0 +1,185 @@
+def add_to_color(ro: vec3, rd: vec3, color: list[float, float, float], contribution: vec3, remaining_bounces: int, medium_ior: float = 1.0, start_override: vec3 | None = None, hit: tuple[vec3, Material, vec3, float, vec3, float] | None = None) -> tuple[float, vec3, vec3]:
+    """
+    :return: (depth, normal, hit_pos)
+    """
+    if contribution.x == 0 and contribution.y == 0 and contribution.z == 0:
+        return float("inf"), vec3(0, 0, 0), vec3(0, 0, 0)
+    if hit is None:
+        hit = raycast(ro.copy(), rd)
+    if hit is None:
+        # apply background color
+        bg_color, depth = background_with_depth(ro, rd)
+        color[0] += bg_color[0] / 255.0 * contribution.r
+        color[1] += bg_color[1] / 255.0 * contribution.g
+        color[2] += bg_color[2] / 255.0 * contribution.b
+        return depth, vec3(0, 0, 0), vec3(0, 0, 0)
+    o_hit_pos = hit[0]
+    o_normal = hit[2]
+    o_depth = hit[5]
+    r, g, b = hit[1].color
+    tint_factor = 1
+
+    shadowed = False
+    if DO_SHADOWS:
+        # trace to light
+        light_amt = 0.0
+        light_count = 0
+        # generate four offsets along surface (skipping normal direction and normal antidirection)
+        offset_mask = vec3(1.0, 1.0, 1.0) - abs(hit[2])
+        positions = [hit[0], hit[0] + hit[2] * 0.0001]
+        ###for x_offset in range(-1, 2):
+        ###    for y_offset in range(-1, 2):
+        ###        for z_offset in range(-1, 2):
+        ###            offset = vec3(x_offset, y_offset, z_offset).element_mul(offset_mask)
+        ###            if offset.length_squared() > 0.0001:
+        ###                positions.append(hit[0] + offset * 0.005/100)
+        ###                positions.append(hit[0] + offset * 0.001/100)  # )0.001)
+        for pos in positions:
+            if raycast(pos + LIGHT_DIRECTION * 0.0001, LIGHT_DIRECTION, skip_refractive=True) is not None:  # hit something
+                shadowed = True
+            else: # totally missed
+                light_amt += 1.0
+            light_count += 1
+        tint_factor *= lerp(AMBIENT_LIGHT, 1, light_amt / light_count)
+    if not shadowed:
+        tint_factor *= lerp(clamp(normal_to_brightness(hit[2], LIGHT_DIRECTION), 0.0, 1.0), 1, AMBIENT_LIGHT)
+        # specular highlight
+        ##spec_power = 20.0
+        ##refl = reflect(-LIGHT_DIRECTION, hit[2])
+        ##dp = clamp(refl * rd, 0.0, 1.0)
+        ##tint_factor += dp ** spec_power
+
+    r *= tint_factor
+    g *= tint_factor
+    b *= tint_factor
+    # line_width = max(6, remaining_bounces) + 2
+    # dbg_ro = ro if start_override is None else start_override
+    # if debug: pygame.draw.line(screen, invert_color((r, g, b)), transform_from_ray_space(dbg_ro).tuple, transform_from_ray_space(hit[0]).tuple, line_width)
+    # if debug: pygame.draw.line(screen, (r, g, b), transform_from_ray_space(dbg_ro).tuple, transform_from_ray_space(hit[0]).tuple, line_width-4)
+
+    #color[0] += r / 255.0 * contribution
+    #color[1] += g / 255.0 * contribution
+    #color[2] += b / 255.0 * contribution
+
+    # check materials for reflection / refraction
+    material_type = MATERIAL_TYPES[hit[1].material_type]
+    surface_type = material_type.surface_type
+    if surface_type == SurfaceType.DIFFUSE:
+        color[0] += r / 255.0 * contribution.r
+        color[1] += g / 255.0 * contribution.g
+        color[2] += b / 255.0 * contribution.b
+    elif surface_type == SurfaceType.REFLECTIVE:
+        reflectance_factor = fresnel_reflection_factor(1.0, 1.0, rd, hit[2], material_type.reflectivity)
+        if DBG_FRESNEL:
+            color[0] = reflectance_factor
+            color[1] = 0
+            color[2] = 0
+            return 0.0, vec3(0, 0, 0), vec3(0, 0, 0)
+        if remaining_bounces > 0:
+            reflected = reflect(rd, hit[2])
+            add_to_color(hit[0]+reflected*0.001, reflected, color, contribution*reflectance_factor, remaining_bounces-1)
+        else:
+            reflectance_factor = 0
+        color[0] += r / 255.0 * contribution.r * (1 - reflectance_factor)
+        color[1] += g / 255.0 * contribution.g * (1 - reflectance_factor)
+        color[2] += b / 255.0 * contribution.b * (1 - reflectance_factor)
+    elif surface_type == SurfaceType.REFRACTIVE:
+        # object_absorb = vec3(8.0, 8.0, 3.0)# * 0.3
+        object_absorb = (vec3.all(1.0) - vec3(*hit[1].color)/255) * material_type.absorption_factor * ABSORPTION_FACTOR
+        reflectance_factor = fresnel_reflection_factor(material_type.ior, medium_ior, rd, hit[2], material_type.reflectivity)
+        if DBG_FRESNEL:
+            color[0] = reflectance_factor
+            color[1] = 0
+            color[2] = 0
+            return 0.0, vec3(0, 0, 0), vec3(0, 0, 0)
+        refractance_factor = 1 - reflectance_factor
+        if medium_ior == material_type.ior:
+            refractance_factor = 1
+            reflectance_factor = 0
+        if remaining_bounces > 0:
+            reflected = reflect(rd, hit[2])
+            refracted = refract(rd, hit[2], material_type.ior / medium_ior)
+            if refracted != vec3(0, 0, 0):
+                #add_to_color(hit[0]+refracted*0.001, refracted, color, contribution*refractance_factor, remaining_bounces-1, material_type.ior)
+                # special handling is needed for refraction (we need to calculate the exit point of the refracted ray, and do an extra trace step if we 'hit' air)
+                refracted_hit = raycast(hit[0]+refracted*0.00000001, refracted)
+                # draw dashed line in refracted direction
+                # if debug: draw_dashed_line(screen, (255, 255, 100), transform_from_ray_space(hit[0]).tuple, transform_from_ray_space(hit[0] + refracted*10).tuple, 1, 10, 10)
+                if refracted_hit is not None:
+                    # steps:
+                    # 1. set refracted_exit to be the exit position of the ray refracted through the current block
+                    # 2. trace a ray along the `refracted` direction starting at `refracted_exit`
+                    # 3. if the ray hits immediately, recurse with the new hit
+                    # 4. if the ray doesn't hit, or hits later, we have entered air and need to re-refract `refracted` and recurse from `refracted_exit`
+                    internal_distance = refracted_hit[3]
+                    refracted_exit = refracted_hit[0] + refracted * (internal_distance + 0.0000000000001)
+                    absorb: vec3 = exp3(-object_absorb * internal_distance)
+                    del refracted_hit
+                    # mark refracted_exit
+                    # if debug: draw_ray_handle(*transform_from_ray_space(refracted_exit).tuple, (255, 255, 255))
+                    next_hit = raycast(refracted_exit + refracted*0.000000001*0, refracted)
+                    if next_hit is None or next_hit[0].dist_squared(refracted_exit) > 0.01**2: # hit air
+                        tir_reflection_factor = fresnel_reflection_factor(material_type.ior, 1.0, rd, -hit[4], material_type.reflectivity)
+                        tir_refraction_factor = 1 - tir_reflection_factor
+                        refracted = refract(rd, -hit[4], 1.0 / material_type.ior)
+                        tir_reflect_dir = reflect(rd, -hit[4])
+                        ### color[0] = tir_reflection_factor
+                        ### color[1] = 0.0
+                        ### color[2] = 0.0
+                        ### return 0.0
+                        # internal reflection!!!
+                        tir_reflect_hit = raycast(hit[0] + tir_reflect_dir * 0.001, tir_reflect_dir)
+                        if refracted == vec3(0, 0, 0):
+                            tir_reflection_factor = 1.0
+                            tir_refraction_factor = 0.0
+                        if tir_reflect_hit is not None:
+                            tir_reflect_internal_distance = tir_reflect_hit[3]
+                            tir_reflect_exit = tir_reflect_hit[0] + tir_reflect_dir*(tir_reflect_internal_distance + 0.001)
+                            tir_reflect_absorb = exp3(-object_absorb * tir_reflect_internal_distance)
+                            del tir_reflect_hit
+                            # recursive call to add_to_color
+                            add_to_color(tir_reflect_exit, tir_reflect_dir, color,
+                                        contribution.element_mul(tir_reflect_absorb)*refractance_factor*tir_reflection_factor,
+                                        remaining_bounces - 1, 1.0,
+                                        start_override=tir_reflect_exit)
+                        if tir_refraction_factor > 0.0: # avoid total internal refraction
+                            next_hit = raycast(refracted_exit, refracted)
+                            if next_hit is not None:
+                                add_to_color(refracted_exit, refracted, color, contribution.element_mul(absorb)*refractance_factor*tir_refraction_factor, remaining_bounces-1, 1.0, start_override=refracted_exit, hit=next_hit)
+                            else: # went out into infinity
+                                bg_color = background(refracted_exit, refracted)
+                                color[0] += bg_color[0] / 255.0 * contribution.r * absorb.r
+                                color[1] += bg_color[1] / 255.0 * contribution.g * absorb.g
+                                color[2] += bg_color[2] / 255.0 * contribution.b * absorb.b
+                                refractance_factor = 0
+                            # draw orange dashed line in `refracted` direction
+                            # if debug: draw_dashed_line(screen, (255, 150, 100), transform_from_ray_space(refracted_exit).tuple, transform_from_ray_space(refracted_exit + refracted*10).tuple, 1, 10, 10)
+                    else:
+                        # to-do check this number
+                        add_to_color(next_hit[0]+refracted*0.001, refracted, color, contribution.element_mul(absorb)*refractance_factor, remaining_bounces-1, material_type.ior, start_override=hit[0], hit=next_hit)
+                #######
+                # END #
+                #######
+                else: # somehow the refracted angle totally missed, just add background
+                    bg_color = background(hit[0]+refracted*0.001, refracted)
+                    color[0] += bg_color[0] / 255.0 * contribution.r
+                    color[1] += bg_color[1] / 255.0 * contribution.g
+                    color[2] += bg_color[2] / 255.0 * contribution.b
+                    refractance_factor = 0
+            else: # total refraction
+                reflectance_factor = 1
+            #_ = reflectance_factor
+            if reflectance_factor > 0:
+                if DBG_REFLECTIONS:
+                    color[0] += 1 * contribution.r*reflectance_factor
+                    color[1] += 0.5 * contribution.g*reflectance_factor
+                else:
+                    add_to_color(hit[0]+reflected*0.001, reflected, color, contribution*reflectance_factor, remaining_bounces-1, medium_ior)
+        else:
+            color[0] = 1
+            reflectance_factor = 0
+            refractance_factor = 0
+        ####color[0] += r / 255.0 * contribution.r * 0.75
+        ####color[1] += g / 255.0 * contribution.g * 0.75
+        ####color[2] += b / 255.0 * contribution.b * 0.75
+    return o_depth, o_normal, o_hit_pos

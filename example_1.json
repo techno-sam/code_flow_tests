@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "name": "root",
+      "color": "#00fffd"
+    },
+
+    {
+      "name": "branch",
+      "color": "#ff0099"
+    },
+    {
+      "name": "true",
+      "color": "#00ff97"
+    }
+  ],
+  "edges": [
+    {
+      "from": "root",
+      "to": "branch",
+      "type": "if-false"
+    },
+    {
+      "from": "root",
+      "to": "true",
+      "type": "if-true"
+    }
+  ]
+}

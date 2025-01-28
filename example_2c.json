@@ -1,0 +1,90 @@
+{
+  "nodes": [
+    {
+      "name": "root",
+      "color": "#00fffd"
+    },
+
+    {
+      "name": "branch",
+      "color": "#ff0099"
+    },
+    {
+      "name": "true",
+      "color": "#00ff97"
+    },
+    {
+      "name": "truer",
+      "color": "#123abc"
+    },
+
+    {
+      "name": "no",
+      "color": "#ff6812"
+    },
+    {
+      "name": "yes",
+      "color": "#a1d929"
+    },
+    {
+      "name": "maybe",
+      "color": "#faa61a"
+    },
+
+    {
+      "name": "other",
+      "color": "12b3fa"
+    }
+  ],
+  "edges": [
+    {
+      "from": "root",
+      "to": "branch",
+      "type": "if-false"
+    },
+    {
+      "from": "root",
+      "to": "true",
+      "type": "if-true"
+    },
+
+    {
+      "from": "branch",
+      "to": "no",
+      "type": "if-false"
+    },
+    {
+      "from": "branch",
+      "to": "yes",
+      "type": "if-true"
+    },
+    {
+      "from": "branch",
+      "to": "maybe",
+      "type": "direct"
+    },
+
+    {
+      "from": "yes",
+      "to": "root",
+      "type": "loop"
+    },
+
+    {
+      "from": "true",
+      "to": "truer",
+      "type": "direct"
+    },
+
+    {
+      "from": "yes",
+      "to": "other",
+      "type": "direct"
+    },
+    {
+      "from": "maybe",
+      "to": "other",
+      "type": "direct"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "name": "root",
+      "color": "#a0ef1d",
+      "lines": [
+        "if a == 42:"
+      ]
+    },
+
+    {
+      "name": "A",
+      "color": "#ff0099",
+      "lines": [
+        "print(\"Life, the Universe, and Everything\")",
+        "print(42)",
+        "print(42)",
+        "print(42)",
+        "print(42)",
+        "print(42)",
+        "print(42)"
+      ]
+    },
+    {
+      "name": "B",
+      "color": "#00ff97",
+      "lines": [
+        "print(\"Lame\")",
+        "g = 5"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "root",
+      "to": "A",
+      "type": "if-true"
+    },
+    {
+      "from": "root",
+      "to": "B",
+      "type": "if-false"
+    }
+  ]
+}

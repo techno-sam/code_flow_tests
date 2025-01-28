@@ -1,0 +1,611 @@
+{
+    "root": "rawtiles",
+    "nodes": [
+        {
+            "name": "q1chunks/ab/jpg",
+            "color": "#F378BF"
+        },
+        {
+            "name": "ALL",
+            "color": "#FF0F02"
+        },
+        {
+            "name": "rawtiles",
+            "color": "#A5660B"
+        },
+        {
+            "name": "runs",
+            "color": "#F81ED0"
+        },
+        {
+            "name": "inferruns.py",
+            "color": "#AAD9E0"
+        },
+        {
+            "name": "scaled/q25/tif",
+            "color": "#C14ED5"
+        },
+        {
+            "name": "scaled/q5/tif",
+            "color": "#DD94E1"
+        },
+        {
+            "name": "produceallq25.py",
+            "color": "#36163A"
+        },
+        {
+            "name": "solveq5mont",
+            "color": "#086707"
+        },
+        {
+            "name": "solveq5rigidtile",
+            "color": "#118F1F"
+        },
+        {
+            "name": "q5global",
+            "color": "#86FCED"
+        },
+        {
+            "name": "q5bbox",
+            "color": "#656EA5"
+        },
+        {
+            "name": "globalshiftq5rigid.py",
+            "color": "#AA28B8"
+        },
+        {
+            "name": "q1pyramid/jpg",
+            "color": "#4333EF"
+        },
+        {
+            "name": "q1emovie.mp4",
+            "color": "#926807"
+        },
+        {
+            "name": "q1emovie.py",
+            "color": "#D128BB"
+        },
+        {
+            "name": "q1pyramid/ab/jpg",
+            "color": "#E4E036"
+        },
+        {
+            "name": "chunkify.py",
+            "color": "#53E29E"
+        },
+        {
+            "name": "q5elastic/jpg",
+            "color": "#BAD273"
+        },
+        {
+            "name": "q5emovie.mp4",
+            "color": "#44684A"
+        },
+        {
+            "name": "q5emovie.py",
+            "color": "#7FE75E"
+        },
+        {
+            "name": "q100elastic/jpg",
+            "color": "#8F6C28"
+        },
+        {
+            "name": "q5toq100.py",
+            "color": "#47C269"
+        },
+        {
+            "name": "q25elastic/jpg",
+            "color": "#9CD58B"
+        },
+        {
+            "name": "q5toq25.py",
+            "color": "#33CFD6"
+        },
+        {
+            "name": "relmontalignq5",
+            "color": "#D7A613"
+        },
+        {
+            "name": "relmontalignq5.py",
+            "color": "#3D8402"
+        },
+        {
+            "name": "relmontattouchq5",
+            "color": "#349D0B"
+        },
+        {
+            "name": "relmontattouchq5.py",
+            "color": "#D35D36"
+        },
+        {
+            "name": "solveq5elastic",
+            "color": "#C8083D"
+        },
+        {
+            "name": "renderq1done",
+            "color": "#97E032"
+        },
+        {
+            "name": "renderq1.py",
+            "color": "#DD812D"
+        },
+        {
+            "name": "solveq5slice",
+            "color": "#D594BB"
+        },
+        {
+            "name": "slicesq25/jpg",
+            "color": "#8BA266"
+        },
+        {
+            "name": "renderq25slice.py",
+            "color": "#60A237"
+        },
+        {
+            "name": "renderq5elastic.py",
+            "color": "#D8F3D7"
+        },
+        {
+            "name": "rigidq5/jpg",
+            "color": "#D565E1"
+        },
+        {
+            "name": "renderq5rigid.py",
+            "color": "#464D53"
+        },
+        {
+            "name": "slicealignq5",
+            "color": "#6292FA"
+        },
+        {
+            "name": "slicealignq5.py",
+            "color": "#F06BE5"
+        },
+        {
+            "name": "transrunmontq5",
+            "color": "#7E5538"
+        },
+        {
+            "name": "solveq5elastic.py",
+            "color": "#E777B9"
+        },
+        {
+            "name": "solveq5mont.py",
+            "color": "#5054FE"
+        },
+        {
+            "name": "solveq5rigidtile.py",
+            "color": "#D540BD"
+        },
+        {
+            "name": "solveq5slice.py",
+            "color": "#014A0A"
+        },
+        {
+            "name": "interrunq25",
+            "color": "#296466"
+        },
+        {
+            "name": "transrunmontq5.py",
+            "color": "#1CC068"
+        },
+        {
+            "name": "zcombine.py",
+            "color": "#7DEF9B"
+        },
+        {
+            "name": "q100emovie.mp4",
+            "color": "#A3225A"
+        },
+        {
+            "name": "q100emovie.py",
+            "color": "#2A00C3"
+        },
+        {
+            "name": "interrunq25.py",
+            "color": "#2F78DD"
+        }
+    ],
+    "edges": [
+        {
+            "from": "q1chunks/ab/jpg",
+            "to": "ALL",
+            "type": "direct"
+        },
+        {
+            "from": "rawtiles",
+            "to": "inferruns.py",
+            "type": "direct"
+        },
+        {
+            "from": "inferruns.py",
+            "to": "runs",
+            "type": "direct"
+        },
+        {
+            "from": "runs",
+            "to": "produceallq25.py",
+            "type": "direct"
+        },
+        {
+            "from": "rawtiles",
+            "to": "produceallq25.py",
+            "type": "direct"
+        },
+        {
+            "from": "produceallq25.py",
+            "to": "scaled/q25/tif",
+            "type": "direct"
+        },
+        {
+            "from": "produceallq25.py",
+            "to": "scaled/q5/tif",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5mont",
+            "to": "globalshiftq5rigid.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5rigidtile",
+            "to": "globalshiftq5rigid.py",
+            "type": "direct"
+        },
+        {
+            "from": "globalshiftq5rigid.py",
+            "to": "q5global",
+            "type": "direct"
+        },
+        {
+            "from": "globalshiftq5rigid.py",
+            "to": "q5bbox",
+            "type": "direct"
+        },
+        {
+            "from": "q1pyramid/jpg",
+            "to": "q1emovie.py",
+            "type": "direct"
+        },
+        {
+            "from": "q1emovie.py",
+            "to": "q1emovie.mp4",
+            "type": "direct"
+        },
+        {
+            "from": "q1pyramid/ab/jpg",
+            "to": "chunkify.py",
+            "type": "direct"
+        },
+        {
+            "from": "chunkify.py",
+            "to": "q1chunks/ab/jpg",
+            "type": "direct"
+        },
+        {
+            "from": "q5elastic/jpg",
+            "to": "q5emovie.py",
+            "type": "direct"
+        },
+        {
+            "from": "q5emovie.py",
+            "to": "q5emovie.mp4",
+            "type": "direct"
+        },
+        {
+            "from": "q5elastic/jpg",
+            "to": "q5toq100.py",
+            "type": "direct"
+        },
+        {
+            "from": "q5toq100.py",
+            "to": "q100elastic/jpg",
+            "type": "direct"
+        },
+        {
+            "from": "q5elastic/jpg",
+            "to": "q5toq25.py",
+            "type": "direct"
+        },
+        {
+            "from": "q5toq25.py",
+            "to": "q25elastic/jpg",
+            "type": "direct"
+        },
+        {
+            "from": "scaled/q5/tif",
+            "to": "relmontalignq5.py",
+            "type": "direct"
+        },
+        {
+            "from": "relmontalignq5.py",
+            "to": "relmontalignq5",
+            "type": "direct"
+        },
+        {
+            "from": "scaled/q5/tif",
+            "to": "relmontattouchq5.py",
+            "type": "direct"
+        },
+        {
+            "from": "relmontattouchq5.py",
+            "to": "relmontattouchq5",
+            "type": "direct"
+        },
+        {
+            "from": "rawtiles",
+            "to": "renderq1.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5mont",
+            "to": "renderq1.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5rigidtile",
+            "to": "renderq1.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5elastic",
+            "to": "renderq1.py",
+            "type": "direct"
+        },
+        {
+            "from": "q5global",
+            "to": "renderq1.py",
+            "type": "direct"
+        },
+        {
+            "from": "q5bbox",
+            "to": "renderq1.py",
+            "type": "direct"
+        },
+        {
+            "from": "renderq1.py",
+            "to": "q1pyramid/jpg",
+            "type": "direct"
+        },
+        {
+            "from": "renderq1.py",
+            "to": "renderq1done",
+            "type": "direct"
+        },
+        {
+            "from": "scaled/q25/tif",
+            "to": "renderq25slice.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5slice",
+            "to": "renderq25slice.py",
+            "type": "direct"
+        },
+        {
+            "from": "renderq25slice.py",
+            "to": "slicesq25/jpg",
+            "type": "direct"
+        },
+        {
+            "from": "scaled/q5/tif",
+            "to": "renderq5elastic.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5mont",
+            "to": "renderq5elastic.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5rigidtile",
+            "to": "renderq5elastic.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5elastic",
+            "to": "renderq5elastic.py",
+            "type": "direct"
+        },
+        {
+            "from": "q5global",
+            "to": "renderq5elastic.py",
+            "type": "direct"
+        },
+        {
+            "from": "q5bbox",
+            "to": "renderq5elastic.py",
+            "type": "direct"
+        },
+        {
+            "from": "renderq5elastic.py",
+            "to": "q5elastic/jpg",
+            "type": "direct"
+        },
+        {
+            "from": "scaled/q5/tif",
+            "to": "renderq5rigid.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5mont",
+            "to": "renderq5rigid.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5rigidtile",
+            "to": "renderq5rigid.py",
+            "type": "direct"
+        },
+        {
+            "from": "renderq5rigid.py",
+            "to": "rigidq5/jpg",
+            "type": "direct"
+        },
+        {
+            "from": "scaled/q5/tif",
+            "to": "slicealignq5.py",
+            "type": "direct"
+        },
+        {
+            "from": "slicealignq5.py",
+            "to": "slicealignq5",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5mont",
+            "to": "solveq5elastic.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5rigidtile",
+            "to": "solveq5elastic.py",
+            "type": "direct"
+        },
+        {
+            "from": "slicealignq5",
+            "to": "solveq5elastic.py",
+            "type": "direct"
+        },
+        {
+            "from": "relmontalignq5",
+            "to": "solveq5elastic.py",
+            "type": "direct"
+        },
+        {
+            "from": "relmontattouchq5",
+            "to": "solveq5elastic.py",
+            "type": "direct"
+        },
+        {
+            "from": "transrunmontq5",
+            "to": "solveq5elastic.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5elastic.py",
+            "to": "solveq5elastic",
+            "type": "direct"
+        },
+        {
+            "from": "slicealignq5",
+            "to": "solveq5mont.py",
+            "type": "direct"
+        },
+        {
+            "from": "relmontalignq5",
+            "to": "solveq5mont.py",
+            "type": "direct"
+        },
+        {
+            "from": "relmontattouchq5",
+            "to": "solveq5mont.py",
+            "type": "direct"
+        },
+        {
+            "from": "transrunmontq5",
+            "to": "solveq5mont.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5mont.py",
+            "to": "solveq5mont",
+            "type": "direct"
+        },
+        {
+            "from": "slicealignq5",
+            "to": "solveq5rigidtile.py",
+            "type": "direct"
+        },
+        {
+            "from": "relmontalignq5",
+            "to": "solveq5rigidtile.py",
+            "type": "direct"
+        },
+        {
+            "from": "relmontattouchq5",
+            "to": "solveq5rigidtile.py",
+            "type": "direct"
+        },
+        {
+            "from": "transrunmontq5",
+            "to": "solveq5rigidtile.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5mont",
+            "to": "solveq5rigidtile.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5rigidtile.py",
+            "to": "solveq5rigidtile",
+            "type": "direct"
+        },
+        {
+            "from": "slicealignq5",
+            "to": "solveq5slice.py",
+            "type": "direct"
+        },
+        {
+            "from": "relmontalignq5",
+            "to": "solveq5slice.py",
+            "type": "direct"
+        },
+        {
+            "from": "relmontattouchq5",
+            "to": "solveq5slice.py",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5slice.py",
+            "to": "solveq5slice",
+            "type": "direct"
+        },
+        {
+            "from": "solveq5slice",
+            "to": "transrunmontq5.py",
+            "type": "direct"
+        },
+        {
+            "from": "interrunq25",
+            "to": "transrunmontq5.py",
+            "type": "direct"
+        },
+        {
+            "from": "transrunmontq5.py",
+            "to": "transrunmontq5",
+            "type": "direct"
+        },
+        {
+            "from": "q1pyramid/jpg",
+            "to": "zcombine.py",
+            "type": "direct"
+        },
+        {
+            "from": "zcombine.py",
+            "to": "q1pyramid/ab/jpg",
+            "type": "direct"
+        },
+        {
+            "from": "q100elastic/jpg",
+            "to": "q100emovie.py",
+            "type": "direct"
+        },
+        {
+            "from": "q100emovie.py",
+            "to": "q100emovie.mp4",
+            "type": "direct"
+        },
+        {
+            "from": "slicesq25/jpg",
+            "to": "interrunq25.py",
+            "type": "direct"
+        },
+        {
+            "from": "interrunq25.py",
+            "to": "interrunq25",
+            "type": "direct"
+        }
+    ]
+}

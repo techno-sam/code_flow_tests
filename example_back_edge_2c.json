@@ -1,0 +1,66 @@
+{
+  "nodes": [
+    {
+      "name": "root",
+      "color": "#a0ef1d"
+    },
+
+    {
+      "name": "A",
+      "color": "#ff0099"
+    },
+    {
+      "name": "D",
+      "color": "#21fa53"
+    },
+    {
+      "name": "B",
+      "color": "#00ff97"
+    },
+    {
+      "name": "C",
+      "color": "#a201fe"
+    }
+  ],
+  "edges": [
+    {
+      "from": "root",
+      "to": "A",
+      "type": "if-true"
+    },
+    {
+      "from": "root",
+      "to": "B",
+      "type": "if-false"
+    },
+
+    {
+      "from": "B",
+      "to": "C",
+      "type": "direct"
+    },
+    {
+      "from": "A",
+      "to": "D",
+      "type": "direct"
+    },
+
+
+    {
+      "from": "C",
+      "to": "root",
+      "type": "loop"
+    },
+    {
+      "from": "D",
+      "to": "root",
+      "type": "loop"
+    },
+
+    {
+      "from": "C",
+      "to": "B",
+      "type": "loop"
+    }
+  ]
+}

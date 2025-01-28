@@ -1,0 +1,72 @@
+ALL: q1chunks/ab/jpg
+
+rawtiles:
+
+runs: rawtiles
+	inferruns.py
+
+scaled/q25/tif scaled/q5/tif: runs rawtiles
+	produceallq25.py
+
+q5global q5bbox: solveq5mont solveq5rigidtile
+	globalshiftq5rigid.py
+
+q1emovie.mp4: q1pyramid/jpg
+	q1emovie.py
+
+q1chunks/ab/jpg: q1pyramid/ab/jpg
+	chunkify.py
+
+q5emovie.mp4: q5elastic/jpg
+	q5emovie.py
+
+q100elastic/jpg: q5elastic/jpg
+	q5toq100.py
+
+q25elastic/jpg: q5elastic/jpg
+	q5toq25.py
+
+relmontalignq5: scaled/q5/tif
+	relmontalignq5.py
+
+relmontattouchq5: scaled/q5/tif
+	relmontattouchq5.py
+
+q1pyramid/jpg renderq1done: rawtiles solveq5mont solveq5rigidtile solveq5elastic q5global q5bbox
+	renderq1.py
+
+slicesq25/jpg: scaled/q25/tif solveq5slice
+	renderq25slice.py
+
+q5elastic/jpg: scaled/q5/tif solveq5mont solveq5rigidtile solveq5elastic q5global q5bbox
+	renderq5elastic.py
+
+rigidq5/jpg: scaled/q5/tif solveq5mont solveq5rigidtile
+	renderq5rigid.py
+
+slicealignq5: scaled/q5/tif
+	slicealignq5.py
+
+solveq5elastic: solveq5mont solveq5rigidtile slicealignq5 relmontalignq5 relmontattouchq5 transrunmontq5
+	solveq5elastic.py
+
+solveq5mont: slicealignq5 relmontalignq5 relmontattouchq5 transrunmontq5
+	solveq5mont.py
+
+solveq5rigidtile: slicealignq5 relmontalignq5 relmontattouchq5 transrunmontq5 solveq5mont
+	solveq5rigidtile.py
+
+solveq5slice: slicealignq5 relmontalignq5 relmontattouchq5 
+	solveq5slice.py
+
+transrunmontq5: solveq5slice interrunq25
+	transrunmontq5.py
+
+q1pyramid/ab/jpg: q1pyramid/jpg
+	zcombine.py
+
+q100emovie.mp4: q100elastic/jpg
+	q100emovie.py
+
+interrunq25: slicesq25/jpg
+	interrunq25.py

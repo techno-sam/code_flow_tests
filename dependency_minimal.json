@@ -1,0 +1,83 @@
+{
+    "root": "A",
+    "nodes": [
+        {
+            "name": "A",
+            "color": "#47C17A"
+        },
+        {
+            "name": "B",
+            "color": "#10B2EE"
+        },
+        {
+            "name": "C",
+            "color": "#B1FB55"
+        },
+        {
+            "name": "D",
+            "color": "#EB4B1C"
+        },
+        {
+            "name": "E",
+            "color": "#3BCD71"
+        },
+        {
+            "name": "F",
+            "color": "#9C917B"
+        },
+        {
+            "name": "G",
+            "color": "#7D5A78"
+        },
+        {
+            "name": "H",
+            "color": "#77320B"
+        },
+        {
+            "name": "I",
+            "color": "#5BF285"
+        }
+    ],
+    "edges": [
+        {
+            "from": "A",
+            "to": "C",
+            "type": "direct"
+        },
+        {
+            "from": "C",
+            "to": "B",
+            "type": "direct"
+        },
+        {
+            "from": "B",
+            "to": "E",
+            "type": "direct"
+        },
+        {
+            "from": "E",
+            "to": "D",
+            "type": "direct"
+        },
+        {
+            "from": "F",
+            "to": "G",
+            "type": "direct"
+        },
+        {
+            "from": "A",
+            "to": "I",
+            "type": "direct"
+        },
+        {
+            "from": "I",
+            "to": "F",
+            "type": "direct"
+        },
+        {
+            "from": "I",
+            "to": "H",
+            "type": "direct"
+        }
+    ]
+}

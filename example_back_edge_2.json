@@ -1,0 +1,49 @@
+{
+  "nodes": [
+    {
+      "name": "root",
+      "color": "#a0ef1d"
+    },
+
+    {
+      "name": "A",
+      "color": "#ff0099"
+    },
+    {
+      "name": "B",
+      "color": "#00ff97"
+    },
+    {
+      "name": "C",
+      "color": "#a201fe"
+    }
+  ],
+  "edges": [
+    {
+      "from": "root",
+      "to": "A",
+      "type": "direct"
+    },
+    {
+      "from": "root",
+      "to": "B",
+      "type": "direct"
+    },
+    {
+      "from": "B",
+      "to": "C",
+      "type": "direct"
+    },
+
+    {
+      "from": "A",
+      "to": "root",
+      "type": "loop"
+    },
+    {
+      "from": "C",
+      "to": "root",
+      "type": "loop"
+    }
+  ]
+}

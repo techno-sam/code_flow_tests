@@ -1,0 +1,70 @@
+{
+  "nodes": [
+    {
+      "name": "root",
+      "color": "#00fffd"
+    },
+
+    {
+      "name": "branch",
+      "color": "#ff0099"
+    },
+    {
+      "name": "true",
+      "color": "#00ff97"
+    },
+
+    {
+      "name": "no",
+      "color": "#ff6812"
+    },
+    {
+      "name": "yes",
+      "color": "#a1d929"
+    },
+
+    {
+      "name": "end",
+      "color": "#3a12ff"
+    }
+  ],
+  "edges": [
+    {
+      "from": "root",
+      "to": "branch",
+      "type": "if-false"
+    },
+    {
+      "from": "root",
+      "to": "true",
+      "type": "if-true"
+    },
+
+    {
+      "from": "branch",
+      "to": "no",
+      "type": "if-false"
+    },
+    {
+      "from": "branch",
+      "to": "yes",
+      "type": "if-true"
+    },
+
+    {
+      "from": "no",
+      "to": "end",
+      "type": "direct"
+    },
+    {
+      "from": "yes",
+      "to": "end",
+      "type": "direct"
+    },
+    {
+      "from": "true",
+      "to": "end",
+      "type": "direct"
+    }
+  ]
+}

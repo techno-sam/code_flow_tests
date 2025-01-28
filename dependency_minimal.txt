@@ -1,0 +1,12 @@
+rawtiles:
+
+runs: rawtiles
+	inferruns.py
+
+scaled/q25/tif: runs
+	produceallq25.py
+
+q1emovie.mp4: q1pyramid/jpg
+
+q1pyramid/jpg renderq1done: rawtiles
+	renderq1.py

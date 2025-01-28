@@ -1,0 +1,107 @@
+{
+  "root": "A",
+  "nodes": [
+    {
+      "name": "A",
+      "color": "#00fffd"
+    },
+
+    {
+      "name": "B",
+      "color": "#ff0099"
+    },
+    {
+      "name": "B1",
+      "color": "#ff0099"
+    },
+    {
+      "name": "B2",
+      "color": "#ff0099"
+    },
+
+    {
+      "name": "C",
+      "color": "#ff6812"
+    },
+    {
+      "name": "D",
+      "color": "#00ff97"
+    },
+    {
+      "name": "D1",
+      "color": "#aaff00"
+    },
+
+    {
+      "name": "EA",
+      "color": "#fa00ff"
+    },
+    {
+      "name": "EB",
+      "color": "#12abf5"
+    },
+    {
+      "name": "EC",
+      "color": "#f5f512"
+    },
+    {
+      "name": "ED",
+      "color": "#a12f10"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A",
+      "to": "B",
+      "type": "direct"
+    },
+    {
+      "from": "A",
+      "to": "C",
+      "type": "direct"
+    },
+    {
+      "from": "A",
+      "to": "D",
+      "type": "direct"
+    },
+
+    {
+      "from": "D",
+      "to": "D1",
+      "type": "direct"
+    },
+
+    {
+      "from": "C",
+      "to": "EA",
+      "type": "direct"
+    },
+    {
+      "from": "C",
+      "to": "EB",
+      "type": "direct"
+    },
+    {
+      "from": "C",
+      "to": "EC",
+      "type": "direct"
+    },
+    {
+      "from": "C",
+      "to": "ED",
+      "type": "direct"
+    },
+
+    {
+      "from": "B",
+      "to": "B1",
+      "type": "direct"
+    },
+    {
+      "from": "B1",
+      "to": "B2",
+      "type": "direct"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "root": "A",
+  "nodes": [
+    {
+      "name": "A",
+      "color": "#00fffd"
+    },
+
+    {
+      "name": "B",
+      "color": "#ff0099"
+    },
+    {
+      "name": "D",
+      "color": "#00ff97"
+    },
+    {
+      "name": "D1",
+      "color": "#aaff00"
+    }
+  ],
+  "edges": [
+    {
+      "from": "A",
+      "to": "B",
+      "type": "direct"
+    },
+    {
+      "from": "A",
+      "to": "D",
+      "type": "direct"
+    },
+
+    {
+      "from": "D",
+      "to": "D1",
+      "type": "direct"
+    }
+  ]
+}

@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+	width="1530.3948731159358"
+	height="3040"
+	style="background-color:#ffffff"
+	><rect width="100%" height="100%" fill="#ffffff" /><rect x="1143.7304461519022" y="10" width="106" height="50" fill="#a5660b" />
+	<text x="1148.0" y="41.75" fill="#5a99f4" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">rawtiles</text>
+	<rect x="1005.9552063070541" y="120" width="154" height="50" fill="#aad9e0" rx="100" />
+	<text x="1010.0" y="151.75" fill="#55261f" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">inferruns.py</text>
+	<line x1="970.9552063070541" y1="120" x2="970.9552063070541" y2="170" stroke="#a5660b" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="120" x2="1518.3948731159358" y2="170" stroke="#a5660b" stroke-width="2" />
+	<rect x="1053.9552063070541" y="230" width="58" height="50" fill="#f81ed0" />
+	<text x="1058.0" y="261.75" fill="#07e12f" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">runs</text>
+	<line x1="970.9552063070541" y1="230" x2="970.9552063070541" y2="280" stroke="#a5660b" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="230" x2="1518.3948731159358" y2="280" stroke="#a5660b" stroke-width="2" />
+	<rect x="925.9552063070541" y="340" width="202" height="50" fill="#36163a" rx="100" />
+	<text x="930.0" y="371.75" fill="#c9e9c5" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">produceallq25.py</text>
+	<line x1="1518.3948731159358" y1="340" x2="1518.3948731159358" y2="390" stroke="#a5660b" stroke-width="2" />
+	<rect x="1000.1318755010439" y="450" width="178" height="50" fill="#c14ed5" />
+	<text x="1005.0" y="481.75" fill="#3eb12a" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">scaled/q25/tif</text>
+	<rect x="804.1318755010437" y="450" width="166" height="50" fill="#dd94e1" />
+	<text x="809.0" y="481.75" fill="#226b1e" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">scaled/q5/tif</text>
+	<line x1="1518.3948731159358" y1="450" x2="1518.3948731159358" y2="500" stroke="#a5660b" stroke-width="2" />
+	<line x1="1088.7011631572075" y1="560" x2="1088.7011631572075" y2="610" stroke="#c14ed5" stroke-width="2" />
+	<rect x="839.7011631572075" y="560" width="214" height="50" fill="#3d8402" rx="100" />
+	<text x="844.0" y="591.75" fill="#c27bfd" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">relmontalignq5.py</text>
+	<rect x="571.7011631572075" y="560" width="238" height="50" fill="#d35d36" rx="100" />
+	<text x="576.0" y="591.75" fill="#2ca2c9" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">relmontattouchq5.py</text>
+	<line x1="162.3948731159358" y1="560" x2="162.3948731159358" y2="610" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="560" x2="1478.3948731159358" y2="610" stroke="#dd94e1" stroke-width="2" />
+	<rect x="351.7011631572075" y="560" width="190" height="50" fill="#f06be5" rx="100" />
+	<text x="356.0" y="591.75" fill="#0f941a" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">slicealignq5.py</text>
+	<line x1="1518.3948731159358" y1="560" x2="1518.3948731159358" y2="610" stroke="#a5660b" stroke-width="2" />
+	<line x1="1088.7011631572075" y1="670" x2="1088.7011631572075" y2="720" stroke="#c14ed5" stroke-width="2" />
+	<rect x="857.7011631572075" y="670" width="178" height="50" fill="#d7a613" />
+	<text x="862.0" y="701.75" fill="#2859ec" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">relmontalignq5</text>
+	<rect x="589.7011631572075" y="670" width="202" height="50" fill="#349d0b" />
+	<text x="594.0" y="701.75" fill="#cb62f4" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">relmontattouchq5</text>
+	<line x1="162.3948731159358" y1="670" x2="162.3948731159358" y2="720" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="670" x2="1478.3948731159358" y2="720" stroke="#dd94e1" stroke-width="2" />
+	<rect x="369.7011631572075" y="670" width="154" height="50" fill="#6292fa" />
+	<text x="374.0" y="701.75" fill="#9d6d05" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">slicealignq5</text>
+	<line x1="1518.3948731159358" y1="670" x2="1518.3948731159358" y2="720" stroke="#a5660b" stroke-width="2" />
+	<line x1="1088.7011631572075" y1="780" x2="1088.7011631572075" y2="830" stroke="#c14ed5" stroke-width="2" />
+	<line x1="442.31167073283655" y1="780" x2="442.31167073283655" y2="830" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="780" x2="766.3139232329622" y2="830" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="780" x2="1344.3948731159358" y2="830" stroke="#d7a613" stroke-width="2" />
+	<rect x="541.3139232329622" y="780" width="190" height="50" fill="#014a0a" rx="100" />
+	<text x="546.0" y="811.75" fill="#feb5f5" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">solveq5slice.py</text>
+	<line x1="362.31167073283655" y1="780" x2="362.31167073283655" y2="830" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="780" x2="482.3139232329622" y2="830" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="780" x2="1304.3948731159358" y2="830" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="780" x2="162.3948731159358" y2="830" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="780" x2="1478.3948731159358" y2="830" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="780" x2="202.3948731159358" y2="830" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="780" x2="402.31167073283655" y2="830" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="780" x2="1264.3948731159358" y2="830" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="780" x2="1518.3948731159358" y2="830" stroke="#a5660b" stroke-width="2" />
+	<line x1="1088.7011631572075" y1="890" x2="1088.7011631572075" y2="940" stroke="#c14ed5" stroke-width="2" />
+	<line x1="442.31167073283655" y1="890" x2="442.31167073283655" y2="940" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="890" x2="766.3139232329622" y2="940" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="890" x2="1344.3948731159358" y2="940" stroke="#d7a613" stroke-width="2" />
+	<rect x="559.3139232329622" y="890" width="154" height="50" fill="#d594bb" />
+	<text x="564.0" y="921.75" fill="#2a6b44" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">solveq5slice</text>
+	<line x1="362.31167073283655" y1="890" x2="362.31167073283655" y2="940" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="890" x2="482.3139232329622" y2="940" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="890" x2="1304.3948731159358" y2="940" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="890" x2="162.3948731159358" y2="940" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="890" x2="1478.3948731159358" y2="940" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="890" x2="202.3948731159358" y2="940" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="890" x2="402.31167073283655" y2="940" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="890" x2="1264.3948731159358" y2="940" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="890" x2="1518.3948731159358" y2="940" stroke="#a5660b" stroke-width="2" />
+	<rect x="801.3139232329622" y="1000" width="214" height="50" fill="#60a237" rx="100" />
+	<text x="806.0" y="1031.75" fill="#9f5dc8" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">renderq25slice.py</text>
+	<line x1="442.31167073283655" y1="1000" x2="442.31167073283655" y2="1050" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="1000" x2="766.3139232329622" y2="1050" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1000" x2="1344.3948731159358" y2="1050" stroke="#d7a613" stroke-width="2" />
+	<line x1="624.3139232329622" y1="1000" x2="624.3139232329622" y2="1050" stroke="#d594bb" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1000" x2="362.31167073283655" y2="1050" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="1000" x2="482.3139232329622" y2="1050" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1000" x2="1304.3948731159358" y2="1050" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1000" x2="162.3948731159358" y2="1050" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1000" x2="1478.3948731159358" y2="1050" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1000" x2="202.3948731159358" y2="1050" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="1000" x2="402.31167073283655" y2="1050" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1000" x2="1264.3948731159358" y2="1050" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1000" x2="1518.3948731159358" y2="1050" stroke="#a5660b" stroke-width="2" />
+	<rect x="825.3139232329622" y="1110" width="166" height="50" fill="#8ba266" />
+	<text x="830.0" y="1141.75" fill="#745d99" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">slicesq25/jpg</text>
+	<line x1="442.31167073283655" y1="1110" x2="442.31167073283655" y2="1160" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="1110" x2="766.3139232329622" y2="1160" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1110" x2="1344.3948731159358" y2="1160" stroke="#d7a613" stroke-width="2" />
+	<line x1="624.3139232329622" y1="1110" x2="624.3139232329622" y2="1160" stroke="#d594bb" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1110" x2="362.31167073283655" y2="1160" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="1110" x2="482.3139232329622" y2="1160" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1110" x2="1304.3948731159358" y2="1160" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1110" x2="162.3948731159358" y2="1160" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1110" x2="1478.3948731159358" y2="1160" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1110" x2="202.3948731159358" y2="1160" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="1110" x2="402.31167073283655" y2="1160" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1110" x2="1264.3948731159358" y2="1160" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1110" x2="1518.3948731159358" y2="1160" stroke="#a5660b" stroke-width="2" />
+	<rect x="819.3139232329622" y="1220" width="178" height="50" fill="#2f78dd" rx="100" />
+	<text x="824.0" y="1251.75" fill="#d08722" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">interrunq25.py</text>
+	<line x1="442.31167073283655" y1="1220" x2="442.31167073283655" y2="1270" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="1220" x2="766.3139232329622" y2="1270" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1220" x2="1344.3948731159358" y2="1270" stroke="#d7a613" stroke-width="2" />
+	<line x1="624.3139232329622" y1="1220" x2="624.3139232329622" y2="1270" stroke="#d594bb" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1220" x2="362.31167073283655" y2="1270" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="1220" x2="482.3139232329622" y2="1270" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1220" x2="1304.3948731159358" y2="1270" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1220" x2="162.3948731159358" y2="1270" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1220" x2="1478.3948731159358" y2="1270" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1220" x2="202.3948731159358" y2="1270" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="1220" x2="402.31167073283655" y2="1270" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1220" x2="1264.3948731159358" y2="1270" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1220" x2="1518.3948731159358" y2="1270" stroke="#a5660b" stroke-width="2" />
+	<rect x="837.3139232329622" y="1330" width="142" height="50" fill="#296466" />
+	<text x="842.0" y="1361.75" fill="#d69b99" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">interrunq25</text>
+	<line x1="442.31167073283655" y1="1330" x2="442.31167073283655" y2="1380" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="1330" x2="766.3139232329622" y2="1380" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1330" x2="1344.3948731159358" y2="1380" stroke="#d7a613" stroke-width="2" />
+	<line x1="624.3139232329622" y1="1330" x2="624.3139232329622" y2="1380" stroke="#d594bb" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1330" x2="362.31167073283655" y2="1380" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="1330" x2="482.3139232329622" y2="1380" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1330" x2="1304.3948731159358" y2="1380" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1330" x2="162.3948731159358" y2="1380" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1330" x2="1478.3948731159358" y2="1380" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1330" x2="202.3948731159358" y2="1380" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="1330" x2="402.31167073283655" y2="1380" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1330" x2="1264.3948731159358" y2="1380" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1330" x2="1518.3948731159358" y2="1380" stroke="#a5660b" stroke-width="2" />
+	<rect x="517.3139232329622" y="1440" width="214" height="50" fill="#1cc068" rx="100" />
+	<text x="522.0" y="1471.75" fill="#e33f97" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">transrunmontq5.py</text>
+	<line x1="442.31167073283655" y1="1440" x2="442.31167073283655" y2="1490" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="1440" x2="766.3139232329622" y2="1490" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1440" x2="1344.3948731159358" y2="1490" stroke="#d7a613" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1440" x2="362.31167073283655" y2="1490" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="1440" x2="482.3139232329622" y2="1490" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1440" x2="1304.3948731159358" y2="1490" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1440" x2="162.3948731159358" y2="1490" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1440" x2="1478.3948731159358" y2="1490" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1440" x2="202.3948731159358" y2="1490" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="1440" x2="402.31167073283655" y2="1490" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1440" x2="1264.3948731159358" y2="1490" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1440" x2="1518.3948731159358" y2="1490" stroke="#a5660b" stroke-width="2" />
+	<rect x="535.3139232329622" y="1550" width="178" height="50" fill="#7e5538" />
+	<text x="540.0" y="1581.75" fill="#81aac7" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">transrunmontq5</text>
+	<line x1="442.31167073283655" y1="1550" x2="442.31167073283655" y2="1600" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="1550" x2="766.3139232329622" y2="1600" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1550" x2="1344.3948731159358" y2="1600" stroke="#d7a613" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1550" x2="362.31167073283655" y2="1600" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="1550" x2="482.3139232329622" y2="1600" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1550" x2="1304.3948731159358" y2="1600" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1550" x2="162.3948731159358" y2="1600" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1550" x2="1478.3948731159358" y2="1600" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1550" x2="202.3948731159358" y2="1600" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="1550" x2="402.31167073283655" y2="1600" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1550" x2="1264.3948731159358" y2="1600" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1550" x2="1518.3948731159358" y2="1600" stroke="#a5660b" stroke-width="2" />
+	<line x1="482.31167073283655" y1="1660" x2="482.31167073283655" y2="1710" stroke="#7e5538" stroke-width="2" />
+	<rect x="638.9233039487498" y="1660" width="178" height="50" fill="#5054fe" rx="100" />
+	<text x="643.0" y="1691.75" fill="#afab01" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">solveq5mont.py</text>
+	<line x1="1224.3948731159358" y1="1660" x2="1224.3948731159358" y2="1710" stroke="#7e5538" stroke-width="2" />
+	<line x1="442.31167073283655" y1="1660" x2="442.31167073283655" y2="1710" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1660" x2="1344.3948731159358" y2="1710" stroke="#d7a613" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1660" x2="362.31167073283655" y2="1710" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1660" x2="1304.3948731159358" y2="1710" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1660" x2="162.3948731159358" y2="1710" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1660" x2="1478.3948731159358" y2="1710" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1660" x2="202.3948731159358" y2="1710" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1660" x2="1264.3948731159358" y2="1710" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1660" x2="1518.3948731159358" y2="1710" stroke="#a5660b" stroke-width="2" />
+	<line x1="482.31167073283655" y1="1770" x2="482.31167073283655" y2="1820" stroke="#7e5538" stroke-width="2" />
+	<rect x="656.9233039487498" y="1770" width="142" height="50" fill="#086707" />
+	<text x="661.0" y="1801.75" fill="#f798f8" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">solveq5mont</text>
+	<line x1="1224.3948731159358" y1="1770" x2="1224.3948731159358" y2="1820" stroke="#7e5538" stroke-width="2" />
+	<line x1="442.31167073283655" y1="1770" x2="442.31167073283655" y2="1820" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1770" x2="1344.3948731159358" y2="1820" stroke="#d7a613" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1770" x2="362.31167073283655" y2="1820" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1770" x2="1304.3948731159358" y2="1820" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1770" x2="162.3948731159358" y2="1820" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1770" x2="1478.3948731159358" y2="1820" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1770" x2="202.3948731159358" y2="1820" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1770" x2="1264.3948731159358" y2="1820" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1770" x2="1518.3948731159358" y2="1820" stroke="#a5660b" stroke-width="2" />
+	<line x1="482.31167073283655" y1="1880" x2="482.31167073283655" y2="1930" stroke="#7e5538" stroke-width="2" />
+	<line x1="692.3948731159358" y1="1880" x2="692.3948731159358" y2="1930" stroke="#086707" stroke-width="2" />
+	<line x1="1130.3948731159358" y1="1880" x2="1130.3948731159358" y2="1930" stroke="#086707" stroke-width="2" />
+	<line x1="242.3948731159358" y1="1880" x2="242.3948731159358" y2="1930" stroke="#086707" stroke-width="2" />
+	<line x1="1438.3948731159358" y1="1880" x2="1438.3948731159358" y2="1930" stroke="#086707" stroke-width="2" />
+	<line x1="522.3116707328365" y1="1880" x2="522.3116707328365" y2="1930" stroke="#086707" stroke-width="2" />
+	<rect x="1165.3948731159358" y="1880" width="238" height="50" fill="#d540bd" rx="100" />
+	<text x="1170.0" y="1911.75" fill="#2abf42" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">solveq5rigidtile.py</text>
+	<line x1="442.31167073283655" y1="1880" x2="442.31167073283655" y2="1930" stroke="#d7a613" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1880" x2="362.31167073283655" y2="1930" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1880" x2="162.3948731159358" y2="1930" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1880" x2="1478.3948731159358" y2="1930" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1880" x2="202.3948731159358" y2="1930" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1880" x2="1518.3948731159358" y2="1930" stroke="#a5660b" stroke-width="2" />
+	<line x1="482.31167073283655" y1="1990" x2="482.31167073283655" y2="2040" stroke="#7e5538" stroke-width="2" />
+	<line x1="692.3948731159358" y1="1990" x2="692.3948731159358" y2="2040" stroke="#086707" stroke-width="2" />
+	<line x1="1130.3948731159358" y1="1990" x2="1130.3948731159358" y2="2040" stroke="#086707" stroke-width="2" />
+	<line x1="242.3948731159358" y1="1990" x2="242.3948731159358" y2="2040" stroke="#086707" stroke-width="2" />
+	<line x1="1438.3948731159358" y1="1990" x2="1438.3948731159358" y2="2040" stroke="#086707" stroke-width="2" />
+	<line x1="522.3116707328365" y1="1990" x2="522.3116707328365" y2="2040" stroke="#086707" stroke-width="2" />
+	<rect x="1183.3948731159358" y="1990" width="202" height="50" fill="#118f1f" />
+	<text x="1188.0" y="2021.75" fill="#ee70e0" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">solveq5rigidtile</text>
+	<line x1="442.31167073283655" y1="1990" x2="442.31167073283655" y2="2040" stroke="#d7a613" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1990" x2="362.31167073283655" y2="2040" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1990" x2="162.3948731159358" y2="2040" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1990" x2="1478.3948731159358" y2="2040" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1990" x2="202.3948731159358" y2="2040" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1990" x2="1518.3948731159358" y2="2040" stroke="#a5660b" stroke-width="2" />
+	<rect x="317.3948731159358" y="2100" width="214" height="50" fill="#e777b9" rx="100" />
+	<text x="322.0" y="2131.75" fill="#188846" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">solveq5elastic.py</text>
+	<rect x="561.3948731159358" y="2100" width="262" height="50" fill="#aa28b8" rx="100" />
+	<text x="566.0" y="2131.75" fill="#55d747" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">globalshiftq5rigid.py</text>
+	<line x1="1130.3948731159358" y1="2100" x2="1130.3948731159358" y2="2150" stroke="#086707" stroke-width="2" />
+	<line x1="242.3948731159358" y1="2100" x2="242.3948731159358" y2="2150" stroke="#086707" stroke-width="2" />
+	<rect x="893.3948731159358" y="2100" width="202" height="50" fill="#464d53" rx="100" />
+	<text x="898.0" y="2131.75" fill="#b9b2ac" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">renderq5rigid.py</text>
+	<line x1="858.3948731159358" y1="2100" x2="858.3948731159358" y2="2150" stroke="#118f1f" stroke-width="2" />
+	<line x1="282.3948731159358" y1="2100" x2="282.3948731159358" y2="2150" stroke="#118f1f" stroke-width="2" />
+	<line x1="162.3948731159358" y1="2100" x2="162.3948731159358" y2="2150" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="2100" x2="1518.3948731159358" y2="2150" stroke="#a5660b" stroke-width="2" />
+	<rect x="335.3948731159358" y="2210" width="178" height="50" fill="#c8083d" />
+	<text x="340.0" y="2241.75" fill="#37f7c2" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">solveq5elastic</text>
+	<rect x="684.8541987517526" y="2210" width="106" height="50" fill="#86fced" />
+	<text x="689.0" y="2241.75" fill="#790312" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q5global</text>
+	<rect x="572.8541987517526" y="2210" width="82" height="50" fill="#656ea5" />
+	<text x="577.0" y="2241.75" fill="#9a915a" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q5bbox</text>
+	<line x1="1130.3948731159358" y1="2210" x2="1130.3948731159358" y2="2260" stroke="#086707" stroke-width="2" />
+	<line x1="242.3948731159358" y1="2210" x2="242.3948731159358" y2="2260" stroke="#086707" stroke-width="2" />
+	<rect x="923.3948731159358" y="2210" width="142" height="50" fill="#d565e1" />
+	<text x="928.0" y="2241.75" fill="#2a9a1e" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">rigidq5/jpg</text>
+	<line x1="858.3948731159358" y1="2210" x2="858.3948731159358" y2="2260" stroke="#118f1f" stroke-width="2" />
+	<line x1="282.3948731159358" y1="2210" x2="282.3948731159358" y2="2260" stroke="#118f1f" stroke-width="2" />
+	<line x1="162.3948731159358" y1="2210" x2="162.3948731159358" y2="2260" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="2210" x2="1518.3948731159358" y2="2260" stroke="#a5660b" stroke-width="2" />
+	<rect x="829.8958055649648" y="2320" width="142" height="50" fill="#dd812d" rx="100" />
+	<text x="834.0" y="2351.75" fill="#227ed2" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">renderq1.py</text>
+	<rect x="204.69995777032045" y="2320" width="226" height="50" fill="#d8f3d7" rx="100" />
+	<text x="209.0" y="2351.75" fill="#270c28" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">renderq5elastic.py</text>
+	<rect x="727.4836739204072" y="2430" width="166" height="50" fill="#4333ef" />
+	<text x="732.0" y="2461.75" fill="#bccc10" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q1pyramid/jpg</text>
+	<rect x="923.4836739204071" y="2430" width="154" height="50" fill="#97e032" />
+	<text x="928.0" y="2461.75" fill="#681fcd" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">renderq1done</text>
+	<rect x="234.69995777032045" y="2430" width="166" height="50" fill="#bad273" />
+	<text x="239.0" y="2461.75" fill="#452d8c" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q5elastic/jpg</text>
+	<rect x="860.0" y="2540" width="142" height="50" fill="#d128bb" rx="100" />
+	<text x="865.0" y="2571.75" fill="#2ed744" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q1emovie.py</text>
+	<rect x="652.0" y="2540" width="142" height="50" fill="#7def9b" rx="100" />
+	<text x="657.0" y="2571.75" fill="#821064" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">zcombine.py</text>
+	<rect x="444.0" y="2540" width="142" height="50" fill="#7fe75e" rx="100" />
+	<text x="449.0" y="2571.75" fill="#8018a1" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q5emovie.py</text>
+	<rect x="242.0" y="2540" width="142" height="50" fill="#47c269" rx="100" />
+	<text x="247.0" y="2571.75" fill="#b83d96" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q5toq100.py</text>
+	<rect x="34.0" y="2540" width="130" height="50" fill="#33cfd6" rx="100" />
+	<text x="39.0" y="2571.75" fill="#cc3029" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q5toq25.py</text>
+	<rect x="854.0" y="2650" width="154" height="50" fill="#926807" />
+	<text x="859.0" y="2681.75" fill="#6d97f8" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q1emovie.mp4</text>
+	<rect x="622.0" y="2650" width="202" height="50" fill="#e4e036" />
+	<text x="627.0" y="2681.75" fill="#1b1fc9" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q1pyramid/ab/jpg</text>
+	<rect x="438.0" y="2650" width="154" height="50" fill="#44684a" />
+	<text x="443.0" y="2681.75" fill="#bb97b5" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q5emovie.mp4</text>
+	<rect x="218.0" y="2650" width="190" height="50" fill="#8f6c28" />
+	<text x="223.0" y="2681.75" fill="#7093d7" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q100elastic/jpg</text>
+	<rect x="10.0" y="2650" width="178" height="50" fill="#9cd58b" />
+	<text x="15.0" y="2681.75" fill="#632a74" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q25elastic/jpg</text>
+	<rect x="652.0" y="2760" width="142" height="50" fill="#53e29e" rx="100" />
+	<text x="657.0" y="2791.75" fill="#ac1d61" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">chunkify.py</text>
+	<rect x="230.0" y="2760" width="166" height="50" fill="#2a00c3" rx="100" />
+	<text x="235.0" y="2791.75" fill="#d5ff3c" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q100emovie.py</text>
+	<rect x="628.0" y="2870" width="190" height="50" fill="#f378bf" />
+	<text x="633.0" y="2901.75" fill="#0c8740" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q1chunks/ab/jpg</text>
+	<rect x="224.0" y="2870" width="178" height="50" fill="#a3225a" />
+	<text x="229.0" y="2901.75" fill="#5cdda5" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">q100emovie.mp4</text>
+	<rect x="700.0" y="2980" width="46" height="50" fill="#ff0f02" />
+	<text x="705.0" y="3011.75" fill="#00f0fd" font-family="FiraCode Nerd Font,Ubuntu Mono,monospace,Arial" font-size="20">ALL</text>
+	<line x1="1196.7304461519022" y1="60" x2="1082.9552063070541" y2="120" stroke="#a5660b" stroke-width="2" />
+	<polygon points="1077.9552063070541,115 1087.9552063070541,115 1082.9552063070541,120" fill="#a5660b" />
+	<line x1="1196.7304461519022" y1="60" x2="970.9552063070541" y2="120" stroke="#a5660b" stroke-width="2" />
+	<line x1="1196.7304461519022" y1="60" x2="1518.3948731159358" y2="120" stroke="#a5660b" stroke-width="2" />
+	<line x1="1082.9552063070541" y1="170" x2="1082.9552063070541" y2="230" stroke="#aad9e0" stroke-width="2" />
+	<polygon points="1077.9552063070541,225 1087.9552063070541,225 1082.9552063070541,230" fill="#aad9e0" />
+	<line x1="970.9552063070541" y1="170" x2="970.9552063070541" y2="230" stroke="#a5660b" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="170" x2="1518.3948731159358" y2="230" stroke="#a5660b" stroke-width="2" />
+	<line x1="1082.9552063070541" y1="280" x2="1026.9552063070541" y2="340" stroke="#f81ed0" stroke-width="2" />
+	<polygon points="1021.9552063070541,335 1031.9552063070541,335 1026.9552063070541,340" fill="#f81ed0" />
+	<line x1="970.9552063070541" y1="280" x2="1026.9552063070541" y2="340" stroke="#a5660b" stroke-width="2" />
+	<polygon points="1021.9552063070541,335 1031.9552063070541,335 1026.9552063070541,340" fill="#a5660b" />
+	<line x1="1518.3948731159358" y1="280" x2="1518.3948731159358" y2="340" stroke="#a5660b" stroke-width="2" />
+	<line x1="1026.9552063070541" y1="390" x2="1089.1318755010439" y2="450" stroke="#36163a" stroke-width="2" />
+	<polygon points="1084.1318755010439,445 1094.1318755010439,445 1089.1318755010439,450" fill="#36163a" />
+	<line x1="1026.9552063070541" y1="390" x2="887.1318755010437" y2="450" stroke="#36163a" stroke-width="2" />
+	<polygon points="882.1318755010437,445 892.1318755010437,445 887.1318755010437,450" fill="#36163a" />
+	<line x1="1518.3948731159358" y1="390" x2="1518.3948731159358" y2="450" stroke="#a5660b" stroke-width="2" />
+	<line x1="1089.1318755010439" y1="500" x2="1088.7011631572075" y2="560" stroke="#c14ed5" stroke-width="2" />
+	<line x1="887.1318755010437" y1="500" x2="946.7011631572075" y2="560" stroke="#dd94e1" stroke-width="2" />
+	<polygon points="941.7011631572075,555 951.7011631572075,555 946.7011631572075,560" fill="#dd94e1" />
+	<line x1="887.1318755010437" y1="500" x2="690.7011631572075" y2="560" stroke="#dd94e1" stroke-width="2" />
+	<polygon points="685.7011631572075,555 695.7011631572075,555 690.7011631572075,560" fill="#dd94e1" />
+	<line x1="887.1318755010437" y1="500" x2="162.3948731159358" y2="560" stroke="#dd94e1" stroke-width="2" />
+	<line x1="887.1318755010437" y1="500" x2="1478.3948731159358" y2="560" stroke="#dd94e1" stroke-width="2" />
+	<line x1="887.1318755010437" y1="500" x2="446.7011631572075" y2="560" stroke="#dd94e1" stroke-width="2" />
+	<polygon points="441.7011631572075,555 451.7011631572075,555 446.7011631572075,560" fill="#dd94e1" />
+	<line x1="1518.3948731159358" y1="500" x2="1518.3948731159358" y2="560" stroke="#a5660b" stroke-width="2" />
+	<line x1="1088.7011631572075" y1="610" x2="1088.7011631572075" y2="670" stroke="#c14ed5" stroke-width="2" />
+	<line x1="946.7011631572075" y1="610" x2="946.7011631572075" y2="670" stroke="#3d8402" stroke-width="2" />
+	<polygon points="941.7011631572075,665 951.7011631572075,665 946.7011631572075,670" fill="#3d8402" />
+	<line x1="690.7011631572075" y1="610" x2="690.7011631572075" y2="670" stroke="#d35d36" stroke-width="2" />
+	<polygon points="685.7011631572075,665 695.7011631572075,665 690.7011631572075,670" fill="#d35d36" />
+	<line x1="162.3948731159358" y1="610" x2="162.3948731159358" y2="670" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="610" x2="1478.3948731159358" y2="670" stroke="#dd94e1" stroke-width="2" />
+	<line x1="446.7011631572075" y1="610" x2="446.7011631572075" y2="670" stroke="#f06be5" stroke-width="2" />
+	<polygon points="441.7011631572075,665 451.7011631572075,665 446.7011631572075,670" fill="#f06be5" />
+	<line x1="1518.3948731159358" y1="610" x2="1518.3948731159358" y2="670" stroke="#a5660b" stroke-width="2" />
+	<line x1="1088.7011631572075" y1="720" x2="1088.7011631572075" y2="780" stroke="#c14ed5" stroke-width="2" />
+	<line x1="946.7011631572075" y1="720" x2="442.31167073283655" y2="780" stroke="#d7a613" stroke-width="2" />
+	<line x1="946.7011631572075" y1="720" x2="766.3139232329622" y2="780" stroke="#d7a613" stroke-width="2" />
+	<line x1="946.7011631572075" y1="720" x2="1344.3948731159358" y2="780" stroke="#d7a613" stroke-width="2" />
+	<line x1="946.7011631572075" y1="720" x2="636.3139232329622" y2="780" stroke="#d7a613" stroke-width="2" />
+	<polygon points="631.3139232329622,775 641.3139232329622,775 636.3139232329622,780" fill="#d7a613" />
+	<line x1="690.7011631572075" y1="720" x2="362.31167073283655" y2="780" stroke="#349d0b" stroke-width="2" />
+	<line x1="690.7011631572075" y1="720" x2="482.3139232329622" y2="780" stroke="#349d0b" stroke-width="2" />
+	<line x1="690.7011631572075" y1="720" x2="1304.3948731159358" y2="780" stroke="#349d0b" stroke-width="2" />
+	<line x1="690.7011631572075" y1="720" x2="636.3139232329622" y2="780" stroke="#349d0b" stroke-width="2" />
+	<polygon points="631.3139232329622,775 641.3139232329622,775 636.3139232329622,780" fill="#349d0b" />
+	<line x1="162.3948731159358" y1="720" x2="162.3948731159358" y2="780" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="720" x2="1478.3948731159358" y2="780" stroke="#dd94e1" stroke-width="2" />
+	<line x1="446.7011631572075" y1="720" x2="202.3948731159358" y2="780" stroke="#6292fa" stroke-width="2" />
+	<line x1="446.7011631572075" y1="720" x2="402.31167073283655" y2="780" stroke="#6292fa" stroke-width="2" />
+	<line x1="446.7011631572075" y1="720" x2="1264.3948731159358" y2="780" stroke="#6292fa" stroke-width="2" />
+	<line x1="446.7011631572075" y1="720" x2="636.3139232329622" y2="780" stroke="#6292fa" stroke-width="2" />
+	<polygon points="631.3139232329622,775 641.3139232329622,775 636.3139232329622,780" fill="#6292fa" />
+	<line x1="1518.3948731159358" y1="720" x2="1518.3948731159358" y2="780" stroke="#a5660b" stroke-width="2" />
+	<line x1="1088.7011631572075" y1="830" x2="1088.7011631572075" y2="890" stroke="#c14ed5" stroke-width="2" />
+	<line x1="442.31167073283655" y1="830" x2="442.31167073283655" y2="890" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="830" x2="766.3139232329622" y2="890" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="830" x2="1344.3948731159358" y2="890" stroke="#d7a613" stroke-width="2" />
+	<line x1="636.3139232329622" y1="830" x2="636.3139232329622" y2="890" stroke="#014a0a" stroke-width="2" />
+	<polygon points="631.3139232329622,885 641.3139232329622,885 636.3139232329622,890" fill="#014a0a" />
+	<line x1="362.31167073283655" y1="830" x2="362.31167073283655" y2="890" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="830" x2="482.3139232329622" y2="890" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="830" x2="1304.3948731159358" y2="890" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="830" x2="162.3948731159358" y2="890" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="830" x2="1478.3948731159358" y2="890" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="830" x2="202.3948731159358" y2="890" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="830" x2="402.31167073283655" y2="890" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="830" x2="1264.3948731159358" y2="890" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="830" x2="1518.3948731159358" y2="890" stroke="#a5660b" stroke-width="2" />
+	<line x1="1088.7011631572075" y1="940" x2="908.3139232329622" y2="1000" stroke="#c14ed5" stroke-width="2" />
+	<polygon points="903.3139232329622,995 913.3139232329622,995 908.3139232329622,1000" fill="#c14ed5" />
+	<line x1="442.31167073283655" y1="940" x2="442.31167073283655" y2="1000" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="940" x2="766.3139232329622" y2="1000" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="940" x2="1344.3948731159358" y2="1000" stroke="#d7a613" stroke-width="2" />
+	<line x1="636.3139232329622" y1="940" x2="908.3139232329622" y2="1000" stroke="#d594bb" stroke-width="2" />
+	<polygon points="903.3139232329622,995 913.3139232329622,995 908.3139232329622,1000" fill="#d594bb" />
+	<line x1="636.3139232329622" y1="940" x2="624.3139232329622" y2="1000" stroke="#d594bb" stroke-width="2" />
+	<line x1="362.31167073283655" y1="940" x2="362.31167073283655" y2="1000" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="940" x2="482.3139232329622" y2="1000" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="940" x2="1304.3948731159358" y2="1000" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="940" x2="162.3948731159358" y2="1000" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="940" x2="1478.3948731159358" y2="1000" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="940" x2="202.3948731159358" y2="1000" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="940" x2="402.31167073283655" y2="1000" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="940" x2="1264.3948731159358" y2="1000" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="940" x2="1518.3948731159358" y2="1000" stroke="#a5660b" stroke-width="2" />
+	<line x1="908.3139232329622" y1="1050" x2="908.3139232329622" y2="1110" stroke="#60a237" stroke-width="2" />
+	<polygon points="903.3139232329622,1105 913.3139232329622,1105 908.3139232329622,1110" fill="#60a237" />
+	<line x1="442.31167073283655" y1="1050" x2="442.31167073283655" y2="1110" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="1050" x2="766.3139232329622" y2="1110" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1050" x2="1344.3948731159358" y2="1110" stroke="#d7a613" stroke-width="2" />
+	<line x1="624.3139232329622" y1="1050" x2="624.3139232329622" y2="1110" stroke="#d594bb" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1050" x2="362.31167073283655" y2="1110" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="1050" x2="482.3139232329622" y2="1110" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1050" x2="1304.3948731159358" y2="1110" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1050" x2="162.3948731159358" y2="1110" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1050" x2="1478.3948731159358" y2="1110" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1050" x2="202.3948731159358" y2="1110" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="1050" x2="402.31167073283655" y2="1110" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1050" x2="1264.3948731159358" y2="1110" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1050" x2="1518.3948731159358" y2="1110" stroke="#a5660b" stroke-width="2" />
+	<line x1="908.3139232329622" y1="1160" x2="908.3139232329622" y2="1220" stroke="#8ba266" stroke-width="2" />
+	<polygon points="903.3139232329622,1215 913.3139232329622,1215 908.3139232329622,1220" fill="#8ba266" />
+	<line x1="442.31167073283655" y1="1160" x2="442.31167073283655" y2="1220" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="1160" x2="766.3139232329622" y2="1220" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1160" x2="1344.3948731159358" y2="1220" stroke="#d7a613" stroke-width="2" />
+	<line x1="624.3139232329622" y1="1160" x2="624.3139232329622" y2="1220" stroke="#d594bb" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1160" x2="362.31167073283655" y2="1220" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="1160" x2="482.3139232329622" y2="1220" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1160" x2="1304.3948731159358" y2="1220" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1160" x2="162.3948731159358" y2="1220" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1160" x2="1478.3948731159358" y2="1220" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1160" x2="202.3948731159358" y2="1220" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="1160" x2="402.31167073283655" y2="1220" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1160" x2="1264.3948731159358" y2="1220" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1160" x2="1518.3948731159358" y2="1220" stroke="#a5660b" stroke-width="2" />
+	<line x1="908.3139232329622" y1="1270" x2="908.3139232329622" y2="1330" stroke="#2f78dd" stroke-width="2" />
+	<polygon points="903.3139232329622,1325 913.3139232329622,1325 908.3139232329622,1330" fill="#2f78dd" />
+	<line x1="442.31167073283655" y1="1270" x2="442.31167073283655" y2="1330" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="1270" x2="766.3139232329622" y2="1330" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1270" x2="1344.3948731159358" y2="1330" stroke="#d7a613" stroke-width="2" />
+	<line x1="624.3139232329622" y1="1270" x2="624.3139232329622" y2="1330" stroke="#d594bb" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1270" x2="362.31167073283655" y2="1330" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="1270" x2="482.3139232329622" y2="1330" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1270" x2="1304.3948731159358" y2="1330" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1270" x2="162.3948731159358" y2="1330" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1270" x2="1478.3948731159358" y2="1330" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1270" x2="202.3948731159358" y2="1330" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="1270" x2="402.31167073283655" y2="1330" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1270" x2="1264.3948731159358" y2="1330" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1270" x2="1518.3948731159358" y2="1330" stroke="#a5660b" stroke-width="2" />
+	<line x1="908.3139232329622" y1="1380" x2="624.3139232329622" y2="1440" stroke="#296466" stroke-width="2" />
+	<polygon points="619.3139232329622,1435 629.3139232329622,1435 624.3139232329622,1440" fill="#296466" />
+	<line x1="442.31167073283655" y1="1380" x2="442.31167073283655" y2="1440" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="1380" x2="766.3139232329622" y2="1440" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1380" x2="1344.3948731159358" y2="1440" stroke="#d7a613" stroke-width="2" />
+	<line x1="624.3139232329622" y1="1380" x2="624.3139232329622" y2="1440" stroke="#d594bb" stroke-width="2" />
+	<polygon points="619.3139232329622,1435 629.3139232329622,1435 624.3139232329622,1440" fill="#d594bb" />
+	<line x1="362.31167073283655" y1="1380" x2="362.31167073283655" y2="1440" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="1380" x2="482.3139232329622" y2="1440" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1380" x2="1304.3948731159358" y2="1440" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1380" x2="162.3948731159358" y2="1440" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1380" x2="1478.3948731159358" y2="1440" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1380" x2="202.3948731159358" y2="1440" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="1380" x2="402.31167073283655" y2="1440" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1380" x2="1264.3948731159358" y2="1440" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1380" x2="1518.3948731159358" y2="1440" stroke="#a5660b" stroke-width="2" />
+	<line x1="624.3139232329622" y1="1490" x2="624.3139232329622" y2="1550" stroke="#1cc068" stroke-width="2" />
+	<polygon points="619.3139232329622,1545 629.3139232329622,1545 624.3139232329622,1550" fill="#1cc068" />
+	<line x1="442.31167073283655" y1="1490" x2="442.31167073283655" y2="1550" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="1490" x2="766.3139232329622" y2="1550" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1490" x2="1344.3948731159358" y2="1550" stroke="#d7a613" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1490" x2="362.31167073283655" y2="1550" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="1490" x2="482.3139232329622" y2="1550" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1490" x2="1304.3948731159358" y2="1550" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1490" x2="162.3948731159358" y2="1550" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1490" x2="1478.3948731159358" y2="1550" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1490" x2="202.3948731159358" y2="1550" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="1490" x2="402.31167073283655" y2="1550" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1490" x2="1264.3948731159358" y2="1550" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1490" x2="1518.3948731159358" y2="1550" stroke="#a5660b" stroke-width="2" />
+	<line x1="624.3139232329622" y1="1600" x2="482.31167073283655" y2="1660" stroke="#7e5538" stroke-width="2" />
+	<line x1="624.3139232329622" y1="1600" x2="727.9233039487498" y2="1660" stroke="#7e5538" stroke-width="2" />
+	<polygon points="722.9233039487498,1655 732.9233039487498,1655 727.9233039487498,1660" fill="#7e5538" />
+	<line x1="624.3139232329622" y1="1600" x2="1224.3948731159358" y2="1660" stroke="#7e5538" stroke-width="2" />
+	<line x1="442.31167073283655" y1="1600" x2="442.31167073283655" y2="1660" stroke="#d7a613" stroke-width="2" />
+	<line x1="766.3139232329622" y1="1600" x2="727.9233039487498" y2="1660" stroke="#d7a613" stroke-width="2" />
+	<polygon points="722.9233039487498,1655 732.9233039487498,1655 727.9233039487498,1660" fill="#d7a613" />
+	<line x1="1344.3948731159358" y1="1600" x2="1344.3948731159358" y2="1660" stroke="#d7a613" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1600" x2="362.31167073283655" y2="1660" stroke="#349d0b" stroke-width="2" />
+	<line x1="482.3139232329622" y1="1600" x2="727.9233039487498" y2="1660" stroke="#349d0b" stroke-width="2" />
+	<polygon points="722.9233039487498,1655 732.9233039487498,1655 727.9233039487498,1660" fill="#349d0b" />
+	<line x1="1304.3948731159358" y1="1600" x2="1304.3948731159358" y2="1660" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1600" x2="162.3948731159358" y2="1660" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1600" x2="1478.3948731159358" y2="1660" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1600" x2="202.3948731159358" y2="1660" stroke="#6292fa" stroke-width="2" />
+	<line x1="402.31167073283655" y1="1600" x2="727.9233039487498" y2="1660" stroke="#6292fa" stroke-width="2" />
+	<polygon points="722.9233039487498,1655 732.9233039487498,1655 727.9233039487498,1660" fill="#6292fa" />
+	<line x1="1264.3948731159358" y1="1600" x2="1264.3948731159358" y2="1660" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1600" x2="1518.3948731159358" y2="1660" stroke="#a5660b" stroke-width="2" />
+	<line x1="482.31167073283655" y1="1710" x2="482.31167073283655" y2="1770" stroke="#7e5538" stroke-width="2" />
+	<line x1="727.9233039487498" y1="1710" x2="727.9233039487498" y2="1770" stroke="#5054fe" stroke-width="2" />
+	<polygon points="722.9233039487498,1765 732.9233039487498,1765 727.9233039487498,1770" fill="#5054fe" />
+	<line x1="1224.3948731159358" y1="1710" x2="1224.3948731159358" y2="1770" stroke="#7e5538" stroke-width="2" />
+	<line x1="442.31167073283655" y1="1710" x2="442.31167073283655" y2="1770" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1710" x2="1344.3948731159358" y2="1770" stroke="#d7a613" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1710" x2="362.31167073283655" y2="1770" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1710" x2="1304.3948731159358" y2="1770" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1710" x2="162.3948731159358" y2="1770" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1710" x2="1478.3948731159358" y2="1770" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1710" x2="202.3948731159358" y2="1770" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1710" x2="1264.3948731159358" y2="1770" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1710" x2="1518.3948731159358" y2="1770" stroke="#a5660b" stroke-width="2" />
+	<line x1="482.31167073283655" y1="1820" x2="482.31167073283655" y2="1880" stroke="#7e5538" stroke-width="2" />
+	<line x1="727.9233039487498" y1="1820" x2="692.3948731159358" y2="1880" stroke="#086707" stroke-width="2" />
+	<line x1="727.9233039487498" y1="1820" x2="1130.3948731159358" y2="1880" stroke="#086707" stroke-width="2" />
+	<line x1="727.9233039487498" y1="1820" x2="242.3948731159358" y2="1880" stroke="#086707" stroke-width="2" />
+	<line x1="727.9233039487498" y1="1820" x2="1438.3948731159358" y2="1880" stroke="#086707" stroke-width="2" />
+	<line x1="727.9233039487498" y1="1820" x2="522.3116707328365" y2="1880" stroke="#086707" stroke-width="2" />
+	<line x1="727.9233039487498" y1="1820" x2="1284.3948731159358" y2="1880" stroke="#086707" stroke-width="2" />
+	<polygon points="1279.3948731159358,1875 1289.3948731159358,1875 1284.3948731159358,1880" fill="#086707" />
+	<line x1="1224.3948731159358" y1="1820" x2="1284.3948731159358" y2="1880" stroke="#7e5538" stroke-width="2" />
+	<polygon points="1279.3948731159358,1875 1289.3948731159358,1875 1284.3948731159358,1880" fill="#7e5538" />
+	<line x1="442.31167073283655" y1="1820" x2="442.31167073283655" y2="1880" stroke="#d7a613" stroke-width="2" />
+	<line x1="1344.3948731159358" y1="1820" x2="1284.3948731159358" y2="1880" stroke="#d7a613" stroke-width="2" />
+	<polygon points="1279.3948731159358,1875 1289.3948731159358,1875 1284.3948731159358,1880" fill="#d7a613" />
+	<line x1="362.31167073283655" y1="1820" x2="362.31167073283655" y2="1880" stroke="#349d0b" stroke-width="2" />
+	<line x1="1304.3948731159358" y1="1820" x2="1284.3948731159358" y2="1880" stroke="#349d0b" stroke-width="2" />
+	<polygon points="1279.3948731159358,1875 1289.3948731159358,1875 1284.3948731159358,1880" fill="#349d0b" />
+	<line x1="162.3948731159358" y1="1820" x2="162.3948731159358" y2="1880" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1820" x2="1478.3948731159358" y2="1880" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1820" x2="202.3948731159358" y2="1880" stroke="#6292fa" stroke-width="2" />
+	<line x1="1264.3948731159358" y1="1820" x2="1284.3948731159358" y2="1880" stroke="#6292fa" stroke-width="2" />
+	<polygon points="1279.3948731159358,1875 1289.3948731159358,1875 1284.3948731159358,1880" fill="#6292fa" />
+	<line x1="1518.3948731159358" y1="1820" x2="1518.3948731159358" y2="1880" stroke="#a5660b" stroke-width="2" />
+	<line x1="482.31167073283655" y1="1930" x2="482.31167073283655" y2="1990" stroke="#7e5538" stroke-width="2" />
+	<line x1="692.3948731159358" y1="1930" x2="692.3948731159358" y2="1990" stroke="#086707" stroke-width="2" />
+	<line x1="1130.3948731159358" y1="1930" x2="1130.3948731159358" y2="1990" stroke="#086707" stroke-width="2" />
+	<line x1="242.3948731159358" y1="1930" x2="242.3948731159358" y2="1990" stroke="#086707" stroke-width="2" />
+	<line x1="1438.3948731159358" y1="1930" x2="1438.3948731159358" y2="1990" stroke="#086707" stroke-width="2" />
+	<line x1="522.3116707328365" y1="1930" x2="522.3116707328365" y2="1990" stroke="#086707" stroke-width="2" />
+	<line x1="1284.3948731159358" y1="1930" x2="1284.3948731159358" y2="1990" stroke="#d540bd" stroke-width="2" />
+	<polygon points="1279.3948731159358,1985 1289.3948731159358,1985 1284.3948731159358,1990" fill="#d540bd" />
+	<line x1="442.31167073283655" y1="1930" x2="442.31167073283655" y2="1990" stroke="#d7a613" stroke-width="2" />
+	<line x1="362.31167073283655" y1="1930" x2="362.31167073283655" y2="1990" stroke="#349d0b" stroke-width="2" />
+	<line x1="162.3948731159358" y1="1930" x2="162.3948731159358" y2="1990" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="1930" x2="1478.3948731159358" y2="1990" stroke="#dd94e1" stroke-width="2" />
+	<line x1="202.3948731159358" y1="1930" x2="202.3948731159358" y2="1990" stroke="#6292fa" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="1930" x2="1518.3948731159358" y2="1990" stroke="#a5660b" stroke-width="2" />
+	<line x1="482.31167073283655" y1="2040" x2="424.3948731159358" y2="2100" stroke="#7e5538" stroke-width="2" />
+	<polygon points="419.3948731159358,2095 429.3948731159358,2095 424.3948731159358,2100" fill="#7e5538" />
+	<line x1="692.3948731159358" y1="2040" x2="692.3948731159358" y2="2100" stroke="#086707" stroke-width="2" />
+	<polygon points="687.3948731159358,2095 697.3948731159358,2095 692.3948731159358,2100" fill="#086707" />
+	<line x1="1130.3948731159358" y1="2040" x2="1130.3948731159358" y2="2100" stroke="#086707" stroke-width="2" />
+	<line x1="242.3948731159358" y1="2040" x2="242.3948731159358" y2="2100" stroke="#086707" stroke-width="2" />
+	<line x1="1438.3948731159358" y1="2040" x2="994.3948731159358" y2="2100" stroke="#086707" stroke-width="2" />
+	<polygon points="989.3948731159358,2095 999.3948731159358,2095 994.3948731159358,2100" fill="#086707" />
+	<line x1="522.3116707328365" y1="2040" x2="424.3948731159358" y2="2100" stroke="#086707" stroke-width="2" />
+	<polygon points="419.3948731159358,2095 429.3948731159358,2095 424.3948731159358,2100" fill="#086707" />
+	<line x1="1284.3948731159358" y1="2040" x2="692.3948731159358" y2="2100" stroke="#118f1f" stroke-width="2" />
+	<polygon points="687.3948731159358,2095 697.3948731159358,2095 692.3948731159358,2100" fill="#118f1f" />
+	<line x1="1284.3948731159358" y1="2040" x2="858.3948731159358" y2="2100" stroke="#118f1f" stroke-width="2" />
+	<line x1="1284.3948731159358" y1="2040" x2="282.3948731159358" y2="2100" stroke="#118f1f" stroke-width="2" />
+	<line x1="1284.3948731159358" y1="2040" x2="994.3948731159358" y2="2100" stroke="#118f1f" stroke-width="2" />
+	<polygon points="989.3948731159358,2095 999.3948731159358,2095 994.3948731159358,2100" fill="#118f1f" />
+	<line x1="1284.3948731159358" y1="2040" x2="424.3948731159358" y2="2100" stroke="#118f1f" stroke-width="2" />
+	<polygon points="419.3948731159358,2095 429.3948731159358,2095 424.3948731159358,2100" fill="#118f1f" />
+	<line x1="442.31167073283655" y1="2040" x2="424.3948731159358" y2="2100" stroke="#d7a613" stroke-width="2" />
+	<polygon points="419.3948731159358,2095 429.3948731159358,2095 424.3948731159358,2100" fill="#d7a613" />
+	<line x1="362.31167073283655" y1="2040" x2="424.3948731159358" y2="2100" stroke="#349d0b" stroke-width="2" />
+	<polygon points="419.3948731159358,2095 429.3948731159358,2095 424.3948731159358,2100" fill="#349d0b" />
+	<line x1="162.3948731159358" y1="2040" x2="162.3948731159358" y2="2100" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1478.3948731159358" y1="2040" x2="994.3948731159358" y2="2100" stroke="#dd94e1" stroke-width="2" />
+	<polygon points="989.3948731159358,2095 999.3948731159358,2095 994.3948731159358,2100" fill="#dd94e1" />
+	<line x1="202.3948731159358" y1="2040" x2="424.3948731159358" y2="2100" stroke="#6292fa" stroke-width="2" />
+	<polygon points="419.3948731159358,2095 429.3948731159358,2095 424.3948731159358,2100" fill="#6292fa" />
+	<line x1="1518.3948731159358" y1="2040" x2="1518.3948731159358" y2="2100" stroke="#a5660b" stroke-width="2" />
+	<line x1="424.3948731159358" y1="2150" x2="424.3948731159358" y2="2210" stroke="#e777b9" stroke-width="2" />
+	<polygon points="419.3948731159358,2205 429.3948731159358,2205 424.3948731159358,2210" fill="#e777b9" />
+	<line x1="692.3948731159358" y1="2150" x2="737.8541987517526" y2="2210" stroke="#aa28b8" stroke-width="2" />
+	<polygon points="732.8541987517526,2205 742.8541987517526,2205 737.8541987517526,2210" fill="#aa28b8" />
+	<line x1="692.3948731159358" y1="2150" x2="613.8541987517526" y2="2210" stroke="#aa28b8" stroke-width="2" />
+	<polygon points="608.8541987517526,2205 618.8541987517526,2205 613.8541987517526,2210" fill="#aa28b8" />
+	<line x1="1130.3948731159358" y1="2150" x2="1130.3948731159358" y2="2210" stroke="#086707" stroke-width="2" />
+	<line x1="242.3948731159358" y1="2150" x2="242.3948731159358" y2="2210" stroke="#086707" stroke-width="2" />
+	<line x1="994.3948731159358" y1="2150" x2="994.3948731159358" y2="2210" stroke="#464d53" stroke-width="2" />
+	<polygon points="989.3948731159358,2205 999.3948731159358,2205 994.3948731159358,2210" fill="#464d53" />
+	<line x1="858.3948731159358" y1="2150" x2="858.3948731159358" y2="2210" stroke="#118f1f" stroke-width="2" />
+	<line x1="282.3948731159358" y1="2150" x2="282.3948731159358" y2="2210" stroke="#118f1f" stroke-width="2" />
+	<line x1="162.3948731159358" y1="2150" x2="162.3948731159358" y2="2210" stroke="#dd94e1" stroke-width="2" />
+	<line x1="1518.3948731159358" y1="2150" x2="1518.3948731159358" y2="2210" stroke="#a5660b" stroke-width="2" />
+	<line x1="424.3948731159358" y1="2260" x2="900.8958055649648" y2="2320" stroke="#c8083d" stroke-width="2" />
+	<polygon points="895.8958055649648,2315 905.8958055649648,2315 900.8958055649648,2320" fill="#c8083d" />
+	<line x1="424.3948731159358" y1="2260" x2="317.69995777032045" y2="2320" stroke="#c8083d" stroke-width="2" />
+	<polygon points="312.69995777032045,2315 322.69995777032045,2315 317.69995777032045,2320" fill="#c8083d" />
+	<line x1="737.8541987517526" y1="2260" x2="900.8958055649648" y2="2320" stroke="#86fced" stroke-width="2" />
+	<polygon points="895.8958055649648,2315 905.8958055649648,2315 900.8958055649648,2320" fill="#86fced" />
+	<line x1="737.8541987517526" y1="2260" x2="317.69995777032045" y2="2320" stroke="#86fced" stroke-width="2" />
+	<polygon points="312.69995777032045,2315 322.69995777032045,2315 317.69995777032045,2320" fill="#86fced" />
+	<line x1="613.8541987517526" y1="2260" x2="900.8958055649648" y2="2320" stroke="#656ea5" stroke-width="2" />
+	<polygon points="895.8958055649648,2315 905.8958055649648,2315 900.8958055649648,2320" fill="#656ea5" />
+	<line x1="613.8541987517526" y1="2260" x2="317.69995777032045" y2="2320" stroke="#656ea5" stroke-width="2" />
+	<polygon points="312.69995777032045,2315 322.69995777032045,2315 317.69995777032045,2320" fill="#656ea5" />
+	<line x1="1130.3948731159358" y1="2260" x2="900.8958055649648" y2="2320" stroke="#086707" stroke-width="2" />
+	<polygon points="895.8958055649648,2315 905.8958055649648,2315 900.8958055649648,2320" fill="#086707" />
+	<line x1="242.3948731159358" y1="2260" x2="317.69995777032045" y2="2320" stroke="#086707" stroke-width="2" />
+	<polygon points="312.69995777032045,2315 322.69995777032045,2315 317.69995777032045,2320" fill="#086707" />
+	<line x1="858.3948731159358" y1="2260" x2="900.8958055649648" y2="2320" stroke="#118f1f" stroke-width="2" />
+	<polygon points="895.8958055649648,2315 905.8958055649648,2315 900.8958055649648,2320" fill="#118f1f" />
+	<line x1="282.3948731159358" y1="2260" x2="317.69995777032045" y2="2320" stroke="#118f1f" stroke-width="2" />
+	<polygon points="312.69995777032045,2315 322.69995777032045,2315 317.69995777032045,2320" fill="#118f1f" />
+	<line x1="162.3948731159358" y1="2260" x2="317.69995777032045" y2="2320" stroke="#dd94e1" stroke-width="2" />
+	<polygon points="312.69995777032045,2315 322.69995777032045,2315 317.69995777032045,2320" fill="#dd94e1" />
+	<line x1="1518.3948731159358" y1="2260" x2="900.8958055649648" y2="2320" stroke="#a5660b" stroke-width="2" />
+	<polygon points="895.8958055649648,2315 905.8958055649648,2315 900.8958055649648,2320" fill="#a5660b" />
+	<line x1="900.8958055649648" y1="2370" x2="810.4836739204072" y2="2430" stroke="#dd812d" stroke-width="2" />
+	<polygon points="805.4836739204072,2425 815.4836739204072,2425 810.4836739204072,2430" fill="#dd812d" />
+	<line x1="900.8958055649648" y1="2370" x2="1000.483673920407" y2="2430" stroke="#dd812d" stroke-width="2" />
+	<polygon points="995.483673920407,2425 1005.483673920407,2425 1000.483673920407,2430" fill="#dd812d" />
+	<line x1="317.69995777032045" y1="2370" x2="317.69995777032045" y2="2430" stroke="#d8f3d7" stroke-width="2" />
+	<polygon points="312.69995777032045,2425 322.69995777032045,2425 317.69995777032045,2430" fill="#d8f3d7" />
+	<line x1="810.4836739204072" y1="2480" x2="931.0" y2="2540" stroke="#4333ef" stroke-width="2" />
+	<polygon points="926.0,2535 936.0,2535 931.0,2540" fill="#4333ef" />
+	<line x1="810.4836739204072" y1="2480" x2="723.0" y2="2540" stroke="#4333ef" stroke-width="2" />
+	<polygon points="718.0,2535 728.0,2535 723.0,2540" fill="#4333ef" />
+	<line x1="317.69995777032045" y1="2480" x2="515.0" y2="2540" stroke="#bad273" stroke-width="2" />
+	<polygon points="510.0,2535 520.0,2535 515.0,2540" fill="#bad273" />
+	<line x1="317.69995777032045" y1="2480" x2="313.0" y2="2540" stroke="#bad273" stroke-width="2" />
+	<polygon points="308.0,2535 318.0,2535 313.0,2540" fill="#bad273" />
+	<line x1="317.69995777032045" y1="2480" x2="99.0" y2="2540" stroke="#bad273" stroke-width="2" />
+	<polygon points="94.0,2535 104.0,2535 99.0,2540" fill="#bad273" />
+	<line x1="931.0" y1="2590" x2="931.0" y2="2650" stroke="#d128bb" stroke-width="2" />
+	<polygon points="926.0,2645 936.0,2645 931.0,2650" fill="#d128bb" />
+	<line x1="723.0" y1="2590" x2="723.0" y2="2650" stroke="#7def9b" stroke-width="2" />
+	<polygon points="718.0,2645 728.0,2645 723.0,2650" fill="#7def9b" />
+	<line x1="515.0" y1="2590" x2="515.0" y2="2650" stroke="#7fe75e" stroke-width="2" />
+	<polygon points="510.0,2645 520.0,2645 515.0,2650" fill="#7fe75e" />
+	<line x1="313.0" y1="2590" x2="313.0" y2="2650" stroke="#47c269" stroke-width="2" />
+	<polygon points="308.0,2645 318.0,2645 313.0,2650" fill="#47c269" />
+	<line x1="99.0" y1="2590" x2="99.0" y2="2650" stroke="#33cfd6" stroke-width="2" />
+	<polygon points="94.0,2645 104.0,2645 99.0,2650" fill="#33cfd6" />
+	<line x1="723.0" y1="2700" x2="723.0" y2="2760" stroke="#e4e036" stroke-width="2" />
+	<polygon points="718.0,2755 728.0,2755 723.0,2760" fill="#e4e036" />
+	<line x1="313.0" y1="2700" x2="313.0" y2="2760" stroke="#8f6c28" stroke-width="2" />
+	<polygon points="308.0,2755 318.0,2755 313.0,2760" fill="#8f6c28" />
+	<line x1="723.0" y1="2810" x2="723.0" y2="2870" stroke="#53e29e" stroke-width="2" />
+	<polygon points="718.0,2865 728.0,2865 723.0,2870" fill="#53e29e" />
+	<line x1="313.0" y1="2810" x2="313.0" y2="2870" stroke="#2a00c3" stroke-width="2" />
+	<polygon points="308.0,2865 318.0,2865 313.0,2870" fill="#2a00c3" />
+	<line x1="723.0" y1="2920" x2="723.0" y2="2980" stroke="#f378bf" stroke-width="2" />
+	<polygon points="718.0,2975 728.0,2975 723.0,2980" fill="#f378bf" />
+</svg>

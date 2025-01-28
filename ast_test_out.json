@@ -1,0 +1,1022 @@
+{
+  "root": "root 1",
+  "nodes": [
+    {
+      "name": "root 1",
+      "color": "#ffaaff",
+      "lines": [
+        "def add_to_color(ro: vec3, rd: vec3, color: list[float, float, float], contribution: vec3, remaining_bounces: int, medium_ior: float = 1.0, start_override: vec3 | None = None, hit: tuple[vec3, Material, vec3, float, vec3, float] | None = None) -> tuple[float, vec3, vec3]:"
+      ]
+    },
+    {
+      "name": "stmt 1",
+      "color": "#ffaaff",
+      "lines": [
+        "    \"\"\"",
+        "    :return: (depth, normal, hit_pos)",
+        "    \"\"\""
+      ]
+    },
+    {
+      "name": "if 1",
+      "color": "#ffaaff",
+      "lines": [
+        "    if contribution.x == 0 and contribution.y == 0 and contribution.z == 0:"
+      ]
+    },
+    {
+      "name": "return 1",
+      "color": "#ffaaff",
+      "lines": [
+        "        return float(\"inf\"), vec3(0, 0, 0), vec3(0, 0, 0)"
+      ]
+    },
+    {
+      "name": "if 2",
+      "color": "#ffaaff",
+      "lines": [
+        "    if hit is None:"
+      ]
+    },
+    {
+      "name": "stmt 2",
+      "color": "#ffaaff",
+      "lines": [
+        "        hit = raycast(ro.copy(), rd)"
+      ]
+    },
+    {
+      "name": "if 3",
+      "color": "#ffaaff",
+      "lines": [
+        "    if hit is None:"
+      ]
+    },
+    {
+      "name": "stmt 3",
+      "color": "#ffaaff",
+      "lines": [
+        "        bg_color, depth = background_with_depth(ro, rd)",
+        "        color[0] += bg_color[0] / 255.0 * contribution.r",
+        "        color[1] += bg_color[1] / 255.0 * contribution.g",
+        "        color[2] += bg_color[2] / 255.0 * contribution.b"
+      ]
+    },
+    {
+      "name": "stmt 7",
+      "color": "#ffaaff",
+      "lines": [
+        "    o_hit_pos = hit[0]",
+        "    o_normal = hit[2]",
+        "    o_depth = hit[5]",
+        "    r, g, b = hit[1].color",
+        "    tint_factor = 1",
+        "    shadowed = False"
+      ]
+    },
+    {
+      "name": "if 4",
+      "color": "#ffaaff",
+      "lines": [
+        "    if DO_SHADOWS:"
+      ]
+    },
+    {
+      "name": "stmt 13",
+      "color": "#ffaaff",
+      "lines": [
+        "        light_amt = 0.0",
+        "        light_count = 0",
+        "        offset_mask = vec3(1.0, 1.0, 1.0) - abs(hit[2])",
+        "        positions = [hit[0], hit[0] + hit[2] * 0.0001]"
+      ]
+    },
+    {
+      "name": "if 6",
+      "color": "#ffaaff",
+      "lines": [
+        "    if not shadowed:"
+      ]
+    },
+    {
+      "name": "stmt 21",
+      "color": "#ffaaff",
+      "lines": [
+        "        tint_factor *= lerp(clamp(normal_to_brightness(hit[2], LIGHT_DIRECTION), 0.0, 1.0), 1, AMBIENT_LIGHT)"
+      ]
+    },
+    {
+      "name": "stmt 22",
+      "color": "#ffaaff",
+      "lines": [
+        "    r *= tint_factor",
+        "    g *= tint_factor",
+        "    b *= tint_factor",
+        "    material_type = MATERIAL_TYPES[hit[1].material_type]",
+        "    surface_type = material_type.surface_type"
+      ]
+    },
+    {
+      "name": "if 7",
+      "color": "#ffaaff",
+      "lines": [
+        "    if surface_type == SurfaceType.DIFFUSE:"
+      ]
+    },
+    {
+      "name": "stmt 27",
+      "color": "#ffaaff",
+      "lines": [
+        "        color[0] += r / 255.0 * contribution.r",
+        "        color[1] += g / 255.0 * contribution.g",
+        "        color[2] += b / 255.0 * contribution.b"
+      ]
+    },
+    {
+      "name": "if 8",
+      "color": "#ffaaff",
+      "lines": [
+        "    elif surface_type == SurfaceType.REFLECTIVE:"
+      ]
+    },
+    {
+      "name": "stmt 30",
+      "color": "#ffaaff",
+      "lines": [
+        "        reflectance_factor = fresnel_reflection_factor(1.0, 1.0, rd, hit[2], material_type.reflectivity)"
+      ]
+    },
+    {
+      "name": "if 11",
+      "color": "#ffaaff",
+      "lines": [
+        "    elif surface_type == SurfaceType.REFRACTIVE:"
+      ]
+    },
+    {
+      "name": "stmt 40",
+      "color": "#ffaaff",
+      "lines": [
+        "        object_absorb = (vec3.all(1.0) - vec3(*hit[1].color)/255) * material_type.absorption_factor * ABSORPTION_FACTOR",
+        "        reflectance_factor = fresnel_reflection_factor(material_type.ior, medium_ior, rd, hit[2], material_type.reflectivity)"
+      ]
+    },
+    {
+      "name": "return 5",
+      "color": "#ffaaff",
+      "lines": [
+        "    return o_depth, o_normal, o_hit_pos"
+      ],
+      "pin_to_bottom": true
+    },
+    {
+      "name": "if 12",
+      "color": "#ffaaff",
+      "lines": [
+        "        if DBG_FRESNEL:"
+      ]
+    },
+    {
+      "name": "stmt 42",
+      "color": "#ffaaff",
+      "lines": [
+        "            color[0] = reflectance_factor",
+        "            color[1] = 0",
+        "            color[2] = 0"
+      ]
+    },
+    {
+      "name": "stmt 45",
+      "color": "#ffaaff",
+      "lines": [
+        "        refractance_factor = 1 - reflectance_factor"
+      ]
+    },
+    {
+      "name": "if 13",
+      "color": "#ffaaff",
+      "lines": [
+        "        if medium_ior == material_type.ior:"
+      ]
+    },
+    {
+      "name": "stmt 46",
+      "color": "#ffaaff",
+      "lines": [
+        "            refractance_factor = 1",
+        "            reflectance_factor = 0"
+      ]
+    },
+    {
+      "name": "if 14",
+      "color": "#ffaaff",
+      "lines": [
+        "        if remaining_bounces > 0:"
+      ]
+    },
+    {
+      "name": "stmt 48",
+      "color": "#ffaaff",
+      "lines": [
+        "            reflected = reflect(rd, hit[2])",
+        "            refracted = refract(rd, hit[2], material_type.ior / medium_ior)"
+      ]
+    },
+    {
+      "name": "stmt 85",
+      "color": "#ffaaff",
+      "lines": [
+        "        else:",
+        "            color[0] = 1",
+        "            reflectance_factor = 0",
+        "            refractance_factor = 0"
+      ]
+    },
+    {
+      "name": "if 15",
+      "color": "#ffaaff",
+      "lines": [
+        "            if refracted != vec3(0, 0, 0):"
+      ]
+    },
+    {
+      "name": "stmt 50",
+      "color": "#ffaaff",
+      "lines": [
+        "                refracted_hit = raycast(hit[0]+refracted*0.00000001, refracted)"
+      ]
+    },
+    {
+      "name": "stmt 81",
+      "color": "#ffaaff",
+      "lines": [
+        "            else: # total refraction",
+        "                reflectance_factor = 1"
+      ]
+    },
+    {
+      "name": "if 22",
+      "color": "#ffaaff",
+      "lines": [
+        "            if reflectance_factor > 0:"
+      ]
+    },
+    {
+      "name": "if 23",
+      "color": "#ffaaff",
+      "lines": [
+        "                if DBG_REFLECTIONS:"
+      ]
+    },
+    {
+      "name": "stmt 82",
+      "color": "#ffaaff",
+      "lines": [
+        "                    color[0] += 1 * contribution.r*reflectance_factor",
+        "                    color[1] += 0.5 * contribution.g*reflectance_factor"
+      ]
+    },
+    {
+      "name": "stmt 84",
+      "color": "#ffaaff",
+      "lines": [
+        "                else:",
+        "                    add_to_color(hit[0]+reflected*0.001, reflected, color, contribution*reflectance_factor, remaining_bounces-1, medium_ior)"
+      ]
+    },
+    {
+      "name": "root 1",
+      "color": "#ffaaff",
+      "lines": [
+        "def add_to_color(ro: vec3, rd: vec3, color: list[float, float, float], contribution: vec3, remaining_bounces: int, medium_ior: float = 1.0, start_override: vec3 | None = None, hit: tuple[vec3, Material, vec3, float, vec3, float] | None = None) -> tuple[float, vec3, vec3]:"
+      ]
+    },
+    {
+      "name": "if 16",
+      "color": "#ffaaff",
+      "lines": [
+        "                if refracted_hit is not None:"
+      ]
+    },
+    {
+      "name": "stmt 51",
+      "color": "#ffaaff",
+      "lines": [
+        "                    internal_distance = refracted_hit[3]",
+        "                    refracted_exit = refracted_hit[0] + refracted * (internal_distance + 0.0000000000001)",
+        "                    absorb: vec3 = exp3(-object_absorb * internal_distance)",
+        "                    del refracted_hit",
+        "                    next_hit = raycast(refracted_exit + refracted*0.000000001*0, refracted)"
+      ]
+    },
+    {
+      "name": "stmt 76",
+      "color": "#ffaaff",
+      "lines": [
+        "                else: # somehow the refracted angle totally missed, just add background",
+        "                    bg_color = background(hit[0]+refracted*0.001, refracted)",
+        "                    color[0] += bg_color[0] / 255.0 * contribution.r",
+        "                    color[1] += bg_color[1] / 255.0 * contribution.g",
+        "                    color[2] += bg_color[2] / 255.0 * contribution.b",
+        "                    refractance_factor = 0"
+      ]
+    },
+    {
+      "name": "if 17",
+      "color": "#ffaaff",
+      "lines": [
+        "                    if next_hit is None or next_hit[0].dist_squared(refracted_exit) > 0.01**2: # hit air"
+      ]
+    },
+    {
+      "name": "stmt 56",
+      "color": "#ffaaff",
+      "lines": [
+        "                        tir_reflection_factor = fresnel_reflection_factor(material_type.ior, 1.0, rd, -hit[4], material_type.reflectivity)",
+        "                        tir_refraction_factor = 1 - tir_reflection_factor",
+        "                        refracted = refract(rd, -hit[4], 1.0 / material_type.ior)",
+        "                        tir_reflect_dir = reflect(rd, -hit[4])",
+        "                        tir_reflect_hit = raycast(hit[0] + tir_reflect_dir * 0.001, tir_reflect_dir)"
+      ]
+    },
+    {
+      "name": "stmt 75",
+      "color": "#ffaaff",
+      "lines": [
+        "                    else:",
+        "                        add_to_color(next_hit[0]+refracted*0.001, refracted, color, contribution.element_mul(absorb)*refractance_factor, remaining_bounces-1, material_type.ior, start_override=hit[0], hit=next_hit)"
+      ]
+    },
+    {
+      "name": "if 18",
+      "color": "#ffaaff",
+      "lines": [
+        "                        if refracted == vec3(0, 0, 0):"
+      ]
+    },
+    {
+      "name": "stmt 61",
+      "color": "#ffaaff",
+      "lines": [
+        "                            tir_reflection_factor = 1.0",
+        "                            tir_refraction_factor = 0.0"
+      ]
+    },
+    {
+      "name": "if 19",
+      "color": "#ffaaff",
+      "lines": [
+        "                        if tir_reflect_hit is not None:"
+      ]
+    },
+    {
+      "name": "stmt 63",
+      "color": "#ffaaff",
+      "lines": [
+        "                            tir_reflect_internal_distance = tir_reflect_hit[3]",
+        "                            tir_reflect_exit = tir_reflect_hit[0] + tir_reflect_dir*(tir_reflect_internal_distance + 0.001)",
+        "                            tir_reflect_absorb = exp3(-object_absorb * tir_reflect_internal_distance)",
+        "                            del tir_reflect_hit",
+        "                            add_to_color(tir_reflect_exit, tir_reflect_dir, color,",
+        "                                        contribution.element_mul(tir_reflect_absorb)*refractance_factor*tir_reflection_factor,",
+        "                                        remaining_bounces - 1, 1.0,",
+        "                                        start_override=tir_reflect_exit)"
+      ]
+    },
+    {
+      "name": "if 20",
+      "color": "#ffaaff",
+      "lines": [
+        "                        if tir_refraction_factor > 0.0: # avoid total internal refraction"
+      ]
+    },
+    {
+      "name": "stmt 68",
+      "color": "#ffaaff",
+      "lines": [
+        "                            next_hit = raycast(refracted_exit, refracted)"
+      ]
+    },
+    {
+      "name": "if 21",
+      "color": "#ffaaff",
+      "lines": [
+        "                            if next_hit is not None:"
+      ]
+    },
+    {
+      "name": "stmt 69",
+      "color": "#ffaaff",
+      "lines": [
+        "                                add_to_color(refracted_exit, refracted, color, contribution.element_mul(absorb)*refractance_factor*tir_refraction_factor, remaining_bounces-1, 1.0, start_override=refracted_exit, hit=next_hit)"
+      ]
+    },
+    {
+      "name": "stmt 70",
+      "color": "#ffaaff",
+      "lines": [
+        "                            else: # went out into infinity",
+        "                                bg_color = background(refracted_exit, refracted)",
+        "                                color[0] += bg_color[0] / 255.0 * contribution.r * absorb.r",
+        "                                color[1] += bg_color[1] / 255.0 * contribution.g * absorb.g",
+        "                                color[2] += bg_color[2] / 255.0 * contribution.b * absorb.b",
+        "                                refractance_factor = 0"
+      ]
+    },
+    {
+      "name": "return 4",
+      "color": "#ffaaff",
+      "lines": [
+        "            return 0.0, vec3(0, 0, 0), vec3(0, 0, 0)"
+      ]
+    },
+    {
+      "name": "end-of-function 1",
+      "color": "#ffaaff",
+      "lines": [],
+      "pin_to_bottom": true
+    },
+    {
+      "name": "if 9",
+      "color": "#ffaaff",
+      "lines": [
+        "        if DBG_FRESNEL:"
+      ]
+    },
+    {
+      "name": "stmt 31",
+      "color": "#ffaaff",
+      "lines": [
+        "            color[0] = reflectance_factor",
+        "            color[1] = 0",
+        "            color[2] = 0"
+      ]
+    },
+    {
+      "name": "if 10",
+      "color": "#ffaaff",
+      "lines": [
+        "        if remaining_bounces > 0:"
+      ]
+    },
+    {
+      "name": "stmt 34",
+      "color": "#ffaaff",
+      "lines": [
+        "            reflected = reflect(rd, hit[2])",
+        "            add_to_color(hit[0]+reflected*0.001, reflected, color, contribution*reflectance_factor, remaining_bounces-1)"
+      ]
+    },
+    {
+      "name": "stmt 36",
+      "color": "#ffaaff",
+      "lines": [
+        "        else:",
+        "            reflectance_factor = 0"
+      ]
+    },
+    {
+      "name": "stmt 37",
+      "color": "#ffaaff",
+      "lines": [
+        "        color[0] += r / 255.0 * contribution.r * (1 - reflectance_factor)",
+        "        color[1] += g / 255.0 * contribution.g * (1 - reflectance_factor)",
+        "        color[2] += b / 255.0 * contribution.b * (1 - reflectance_factor)"
+      ]
+    },
+    {
+      "name": "return 3",
+      "color": "#ffaaff",
+      "lines": [
+        "            return 0.0, vec3(0, 0, 0), vec3(0, 0, 0)"
+      ]
+    },
+    {
+      "name": "loop-for 1",
+      "color": "#ffaaff",
+      "lines": [
+        "        for pos in positions:"
+      ]
+    },
+    {
+      "name": "if 5",
+      "color": "#ffaaff",
+      "lines": [
+        "            if raycast(pos + LIGHT_DIRECTION * 0.0001, LIGHT_DIRECTION, skip_refractive=True) is not None:  # hit something"
+      ]
+    },
+    {
+      "name": "stmt 20",
+      "color": "#ffaaff",
+      "lines": [
+        "        tint_factor *= lerp(AMBIENT_LIGHT, 1, light_amt / light_count)"
+      ]
+    },
+    {
+      "name": "stmt 17",
+      "color": "#ffaaff",
+      "lines": [
+        "                shadowed = True"
+      ]
+    },
+    {
+      "name": "stmt 18",
+      "color": "#ffaaff",
+      "lines": [
+        "            else: # totally missed",
+        "                light_amt += 1.0"
+      ]
+    },
+    {
+      "name": "stmt 19",
+      "color": "#ffaaff",
+      "lines": [
+        "            light_count += 1"
+      ]
+    },
+    {
+      "name": "return 2",
+      "color": "#ffaaff",
+      "lines": [
+        "        return depth, vec3(0, 0, 0), vec3(0, 0, 0)"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "root 1",
+      "to": "stmt 1",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 1",
+      "to": "if 1",
+      "type": "direct"
+    },
+    {
+      "from": "if 1",
+      "to": "return 1",
+      "type": "if-true"
+    },
+    {
+      "from": "if 1",
+      "to": "if 2",
+      "type": "if-false"
+    },
+    {
+      "from": "return 1",
+      "to": "end-of-function 1",
+      "type": "direct"
+    },
+    {
+      "from": "if 2",
+      "to": "stmt 2",
+      "type": "if-true"
+    },
+    {
+      "from": "if 2",
+      "to": "if 3",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 2",
+      "to": "if 3",
+      "type": "direct"
+    },
+    {
+      "from": "if 3",
+      "to": "stmt 3",
+      "type": "if-true"
+    },
+    {
+      "from": "if 3",
+      "to": "stmt 7",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 3",
+      "to": "return 2",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 7",
+      "to": "if 4",
+      "type": "direct"
+    },
+    {
+      "from": "if 4",
+      "to": "stmt 13",
+      "type": "if-true"
+    },
+    {
+      "from": "if 4",
+      "to": "if 6",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 13",
+      "to": "loop-for 1",
+      "type": "direct"
+    },
+    {
+      "from": "if 6",
+      "to": "stmt 21",
+      "type": "if-true"
+    },
+    {
+      "from": "if 6",
+      "to": "stmt 22",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 21",
+      "to": "stmt 22",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 22",
+      "to": "if 7",
+      "type": "direct"
+    },
+    {
+      "from": "if 7",
+      "to": "stmt 27",
+      "type": "if-true"
+    },
+    {
+      "from": "if 7",
+      "to": "if 8",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 27",
+      "to": "return 5",
+      "type": "direct"
+    },
+    {
+      "from": "if 8",
+      "to": "stmt 30",
+      "type": "if-true"
+    },
+    {
+      "from": "if 8",
+      "to": "if 11",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 30",
+      "to": "if 9",
+      "type": "direct"
+    },
+    {
+      "from": "if 11",
+      "to": "stmt 40",
+      "type": "if-true"
+    },
+    {
+      "from": "if 11",
+      "to": "return 5",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 40",
+      "to": "if 12",
+      "type": "direct"
+    },
+    {
+      "from": "if 12",
+      "to": "stmt 42",
+      "type": "if-true"
+    },
+    {
+      "from": "if 12",
+      "to": "stmt 45",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 42",
+      "to": "return 4",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 45",
+      "to": "if 13",
+      "type": "direct"
+    },
+    {
+      "from": "if 13",
+      "to": "stmt 46",
+      "type": "if-true"
+    },
+    {
+      "from": "if 13",
+      "to": "if 14",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 46",
+      "to": "if 14",
+      "type": "direct"
+    },
+    {
+      "from": "if 14",
+      "to": "stmt 48",
+      "type": "if-true"
+    },
+    {
+      "from": "if 14",
+      "to": "stmt 85",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 48",
+      "to": "if 15",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 85",
+      "to": "return 5",
+      "type": "direct"
+    },
+    {
+      "from": "if 15",
+      "to": "stmt 50",
+      "type": "if-true"
+    },
+    {
+      "from": "if 15",
+      "to": "stmt 81",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 50",
+      "to": "if 16",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 81",
+      "to": "if 22",
+      "type": "direct"
+    },
+    {
+      "from": "if 22",
+      "to": "if 23",
+      "type": "if-true"
+    },
+    {
+      "from": "if 22",
+      "to": "return 5",
+      "type": "if-false"
+    },
+    {
+      "from": "if 23",
+      "to": "stmt 82",
+      "type": "if-true"
+    },
+    {
+      "from": "if 23",
+      "to": "stmt 84",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 82",
+      "to": "return 5",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 84",
+      "to": "root 1",
+      "type": "recursion"
+    },
+    {
+      "from": "stmt 84",
+      "to": "return 5",
+      "type": "direct"
+    },
+    {
+      "from": "root 1",
+      "to": "stmt 1",
+      "type": "direct"
+    },
+    {
+      "from": "if 16",
+      "to": "stmt 51",
+      "type": "if-true"
+    },
+    {
+      "from": "if 16",
+      "to": "stmt 76",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 51",
+      "to": "if 17",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 76",
+      "to": "if 22",
+      "type": "direct"
+    },
+    {
+      "from": "if 17",
+      "to": "stmt 56",
+      "type": "if-true"
+    },
+    {
+      "from": "if 17",
+      "to": "stmt 75",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 56",
+      "to": "if 18",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 75",
+      "to": "root 1",
+      "type": "recursion"
+    },
+    {
+      "from": "stmt 75",
+      "to": "if 22",
+      "type": "direct"
+    },
+    {
+      "from": "if 18",
+      "to": "stmt 61",
+      "type": "if-true"
+    },
+    {
+      "from": "if 18",
+      "to": "if 19",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 61",
+      "to": "if 19",
+      "type": "direct"
+    },
+    {
+      "from": "if 19",
+      "to": "stmt 63",
+      "type": "if-true"
+    },
+    {
+      "from": "if 19",
+      "to": "if 20",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 63",
+      "to": "root 1",
+      "type": "recursion"
+    },
+    {
+      "from": "stmt 63",
+      "to": "if 20",
+      "type": "direct"
+    },
+    {
+      "from": "if 20",
+      "to": "stmt 68",
+      "type": "if-true"
+    },
+    {
+      "from": "if 20",
+      "to": "if 22",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 68",
+      "to": "if 21",
+      "type": "direct"
+    },
+    {
+      "from": "if 21",
+      "to": "stmt 69",
+      "type": "if-true"
+    },
+    {
+      "from": "if 21",
+      "to": "stmt 70",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 69",
+      "to": "root 1",
+      "type": "recursion"
+    },
+    {
+      "from": "stmt 69",
+      "to": "if 22",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 70",
+      "to": "if 22",
+      "type": "direct"
+    },
+    {
+      "from": "return 4",
+      "to": "end-of-function 1",
+      "type": "direct"
+    },
+    {
+      "from": "if 9",
+      "to": "stmt 31",
+      "type": "if-true"
+    },
+    {
+      "from": "if 9",
+      "to": "if 10",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 31",
+      "to": "return 3",
+      "type": "direct"
+    },
+    {
+      "from": "if 10",
+      "to": "stmt 34",
+      "type": "if-true"
+    },
+    {
+      "from": "if 10",
+      "to": "stmt 36",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 34",
+      "to": "root 1",
+      "type": "recursion"
+    },
+    {
+      "from": "stmt 34",
+      "to": "stmt 37",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 36",
+      "to": "stmt 37",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 37",
+      "to": "return 5",
+      "type": "direct"
+    },
+    {
+      "from": "return 3",
+      "to": "end-of-function 1",
+      "type": "direct"
+    },
+    {
+      "from": "loop-for 1",
+      "to": "if 5",
+      "type": "if-true"
+    },
+    {
+      "from": "loop-for 1",
+      "to": "stmt 20",
+      "type": "if-false"
+    },
+    {
+      "from": "if 5",
+      "to": "stmt 17",
+      "type": "if-true"
+    },
+    {
+      "from": "if 5",
+      "to": "stmt 18",
+      "type": "if-false"
+    },
+    {
+      "from": "stmt 20",
+      "to": "if 6",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 17",
+      "to": "stmt 19",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 18",
+      "to": "stmt 19",
+      "type": "direct"
+    },
+    {
+      "from": "stmt 19",
+      "to": "loop-for 1",
+      "type": "loop"
+    },
+    {
+      "from": "return 2",
+      "to": "end-of-function 1",
+      "type": "direct"
+    }
+  ]
+}
